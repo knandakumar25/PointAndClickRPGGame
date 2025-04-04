@@ -1,0 +1,90 @@
+[gd_scene load_steps=9 format=3 uid="uid://b3srq506njyhj"]
+
+[ext_resource type="Texture2D" uid="uid://b7vvvtnvfihul" path="res://assets/images/wall.png" id="1_vn6aq"]
+[ext_resource type="Script" path="res://lever.gd" id="2_xmwij"]
+[ext_resource type="Texture2D" uid="uid://bxg0wolb36hsx" path="res://assets/images/leverDown.png" id="3_ixo58"]
+[ext_resource type="Texture2D" uid="uid://4kxeuwsbhmpu" path="res://assets/images/leverUp.png" id="4_cvg1n"]
+[ext_resource type="Texture2D" uid="uid://be6qpb04bx05g" path="res://assets/images/door_closed.png" id="5_ify5w"]
+[ext_resource type="Texture2D" uid="uid://divo0ss2qrri" path="res://assets/images/door_open.png" id="6_3ms8k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nvdou"]
+size = Vector2(106, 143)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vv6x2"]
+size = Vector2(140, 241)
+
+[node name="Level 2" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1024.0
+offset_bottom = 1024.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_vn6aq")
+metadata/_edit_use_anchors_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(575, 325)
+
+[node name="Lever" type="Area2D" parent="."]
+script = ExtResource("2_xmwij")
+lever_on_texture = ExtResource("3_ixo58")
+lever_off_texture = ExtResource("4_cvg1n")
+door_closed_texture = ExtResource("5_ify5w")
+door_open_texture = ExtResource("6_3ms8k")
+
+[node name="Sprite2D" type="Sprite2D" parent="Lever"]
+position = Vector2(240, 145)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_cvg1n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lever"]
+position = Vector2(249, 177.5)
+shape = SubResource("RectangleShape2D_nvdou")
+
+[node name="Control" type="Control" parent="Lever"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Lever/Control"]
+visible = false
+layout_mode = 0
+offset_left = 89.0
+offset_top = 99.0
+offset_right = 129.0
+offset_bottom = 122.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Lever"
+
+[node name="Door" type="Area2D" parent="Lever"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Lever/Door"]
+position = Vector2(252, 417)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_ify5w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lever/Door"]
+position = Vector2(253, 418.5)
+shape = SubResource("RectangleShape2D_vv6x2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Level 2"
+
+[connection signal="mouse_entered" from="Lever" to="Lever" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Lever" to="Lever" method="_on_mouse_exited"]
