@@ -6,7 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://c877mxl82yqfs" path="res://assets/music/water-bubbles-257594.mp3" id="6_icq5p"]
 [ext_resource type="Texture2D" uid="uid://divo0ss2qrri" path="res://assets/images/door_open.png" id="6_m7lfj"]
 [ext_resource type="PackedScene" uid="uid://bmmj5008gq35f" path="res://scenes/spikes.tscn" id="7_6t1wr"]
-[ext_resource type="Texture2D" uid="uid://ch68cp8u8n7oi" path="res://assets/images/varuna.png" id="7_53hg1"]
+[ext_resource type="Texture2D" uid="uid://ow0cvwsg6eoc" path="res://assets/images/varuna3.png" id="7_xlevg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ily6c"]
 size = Vector2(140, 241)
@@ -118,7 +118,7 @@ offset_left = 143.0
 offset_top = 141.0
 offset_right = 813.0
 offset_bottom = 190.0
-text = "When you are with the All Supreme, you need to get all readable with him. For he is the way out."
+text = "When you are with the All Supreme, you need to get all READABLE with him. For he is the way out."
 autowrap_mode = 1
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
@@ -126,9 +126,9 @@ stream = ExtResource("6_icq5p")
 volume_db = 24.0
 autoplay = true
 
-[node name="Varuna" type="Sprite2D" parent="."]
-position = Vector2(483, 543)
-texture = ExtResource("7_53hg1")
+[node name="Varuna3" type="Sprite2D" parent="."]
+position = Vector2(453, 536)
+texture = ExtResource("7_xlevg")
 
 [connection signal="mouse_entered" from="Code" to="Code" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Code" to="Code" method="_on_mouse_exited"]

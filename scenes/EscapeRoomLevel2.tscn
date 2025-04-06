@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://be6qpb04bx05g" path="res://assets/images/door_closed.png" id="5_ify5w"]
 [ext_resource type="Texture2D" uid="uid://divo0ss2qrri" path="res://assets/images/door_open.png" id="6_3ms8k"]
 [ext_resource type="AudioStream" uid="uid://c877mxl82yqfs" path="res://assets/music/water-bubbles-257594.mp3" id="6_7mwrs"]
-[ext_resource type="Texture2D" uid="uid://ch68cp8u8n7oi" path="res://assets/images/varuna.png" id="7_sv52e"]
+[ext_resource type="Texture2D" uid="uid://bb235kbgmtvho" path="res://assets/images/varuna2.png" id="7_8rd2b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vv6x2"]
 size = Vector2(140, 241)
@@ -78,13 +78,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
+offset_left = -199.0
+offset_top = -94.0
+offset_right = 187.0
+offset_bottom = -41.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "You get to the next scene just to realize a riddle is to be solved."
+text = "You get to the next scene just to realize a riddle is to be solved. To exit is to code your way out."
+autowrap_mode = 1
 
 [node name="Spikes" parent="." instance=ExtResource("5_06d2a")]
 
@@ -146,8 +147,8 @@ theme_override_font_sizes/font_size = 20
 text = "And legs on spiders end the win."
 autowrap_mode = 1
 
-[node name="Varuna" type="Sprite2D" parent="."]
-position = Vector2(544, 508)
-texture = ExtResource("7_sv52e")
+[node name="Varuna2" type="Sprite2D" parent="."]
+position = Vector2(566, 505)
+texture = ExtResource("7_8rd2b")
 
 [connection signal="timeout" from="SpikeTimer" to="Code" method="_on_spike_timer_timeout"]

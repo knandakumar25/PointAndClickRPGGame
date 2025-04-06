@@ -124,9 +124,9 @@ autostart = true
 [node name="Label" type="Label" parent="."]
 offset_left = 148.0
 offset_top = 199.0
-offset_right = 831.0
+offset_right = 829.0
 offset_bottom = 248.0
-text = "You realize the key to escape is to solve puzzles. For what secrets are behind, a key is all that is needed be free from trouble."
+text = "You realize the key to escape is to solve puzzles. For what secrets are behind, the handle of humanity is all that is needed to be free from trouble."
 autowrap_mode = 1
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
