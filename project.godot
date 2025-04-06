@@ -11,6 +11,10 @@ config_version=5
 [application]
 
 config/name="PointAndClickRPGGame"
-run/main_scene="res://scenes/EscapeRoomLevel1.tscn"
+run/main_scene="res://scenes/transition_scene_2.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[gui]
+
+theme/custom_font="res://assets/fonts/JainiPurva-Regular.ttf"

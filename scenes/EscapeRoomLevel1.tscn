@@ -1,17 +1,23 @@
-[gd_scene load_steps=9 format=3 uid="uid://cgo1av0bmw6w5"]
+[gd_scene load_steps=13 format=3 uid="uid://cgo1av0bmw6w5"]
 
 [ext_resource type="Texture2D" uid="uid://b7vvvtnvfihul" path="res://assets/images/wall.png" id="1_7l0yn"]
-[ext_resource type="Script" path="res://lever.gd" id="2_vx5y2"]
+[ext_resource type="Script" path="res://scenes/lever.gd" id="2_vx5y2"]
 [ext_resource type="Texture2D" uid="uid://bxg0wolb36hsx" path="res://assets/images/leverDown.png" id="3_vd65d"]
 [ext_resource type="Texture2D" uid="uid://4kxeuwsbhmpu" path="res://assets/images/leverUp.png" id="3_w00a3"]
 [ext_resource type="Texture2D" uid="uid://be6qpb04bx05g" path="res://assets/images/door_closed.png" id="5_s380f"]
 [ext_resource type="Texture2D" uid="uid://divo0ss2qrri" path="res://assets/images/door_open.png" id="6_yrugw"]
+[ext_resource type="PackedScene" uid="uid://bmmj5008gq35f" path="res://scenes/spikes.tscn" id="7_5ww1y"]
+[ext_resource type="AudioStream" uid="uid://c877mxl82yqfs" path="res://assets/music/water-bubbles-257594.mp3" id="8_jn6jo"]
+[ext_resource type="Texture2D" uid="uid://ch68cp8u8n7oi" path="res://assets/images/varuna.png" id="9_ep1xw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nvdou"]
-size = Vector2(106, 143)
+size = Vector2(182, 166)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uhark"]
 size = Vector2(140, 241)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o0ia4"]
+size = Vector2(114, 197)
 
 [node name="Level 1" type="Node2D"]
 
@@ -37,12 +43,14 @@ door_closed_texture = ExtResource("5_s380f")
 door_open_texture = ExtResource("6_yrugw")
 
 [node name="Sprite2D" type="Sprite2D" parent="Lever"]
-position = Vector2(240, 145)
-scale = Vector2(0.5, 0.5)
+visible = false
+position = Vector2(443, 421)
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("3_w00a3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lever"]
-position = Vector2(249, 177.5)
+position = Vector2(438.5, 426.5)
+scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_nvdou")
 
 [node name="Door" type="Area2D" parent="Lever"]
@@ -88,5 +96,71 @@ theme_override_font_sizes/font_size = 30
 text = "Level 1"
 metadata/_edit_use_anchors_ = true
 
+[node name="TimerLabel" type="Label" parent="CanvasLayer"]
+offset_left = 972.0
+offset_right = 1012.0
+offset_bottom = 23.0
+
+[node name="Label2" type="Label" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Spikes" parent="." instance=ExtResource("7_5ww1y")]
+
+[node name="SpikeTimer" type="Timer" parent="."]
+wait_time = 600.0
+one_shot = true
+autostart = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = 148.0
+offset_top = 199.0
+offset_right = 831.0
+offset_bottom = 248.0
+text = "You realize the key to escape is to solve puzzles. For what secrets are behind, a key is all that is needed be free from trouble."
+autowrap_mode = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_jn6jo")
+volume_db = 8.0
+autoplay = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Varuna" type="Sprite2D" parent="Area2D"]
+position = Vector2(441, 425)
+texture = ExtResource("9_ep1xw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(442, 430.5)
+shape = SubResource("RectangleShape2D_o0ia4")
+
+[node name="Varuna2" type="Sprite2D" parent="."]
+position = Vector2(83, 531)
+texture = ExtResource("9_ep1xw")
+
+[node name="Varuna3" type="Sprite2D" parent="."]
+position = Vector2(73, 291)
+texture = ExtResource("9_ep1xw")
+
+[node name="Varuna4" type="Sprite2D" parent="."]
+position = Vector2(687, 491)
+texture = ExtResource("9_ep1xw")
+
+[node name="Varuna5" type="Sprite2D" parent="."]
+position = Vector2(885, 340)
+texture = ExtResource("9_ep1xw")
+
 [connection signal="mouse_entered" from="Lever" to="Lever" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Lever" to="Lever" method="_on_mouse_exited"]
+[connection signal="timeout" from="SpikeTimer" to="Lever" method="_on_spike_timer_timeout"]
+[connection signal="mouse_entered" from="Area2D" to="Lever" method="_on_area_2d_mouse_entered"]

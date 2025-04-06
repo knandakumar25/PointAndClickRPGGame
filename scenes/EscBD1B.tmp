@@ -1,0 +1,118 @@
+[gd_scene load_steps=10 format=3 uid="uid://b3srq506njyhj"]
+
+[ext_resource type="Texture2D" uid="uid://b7vvvtnvfihul" path="res://assets/images/wall.png" id="1_vn6aq"]
+[ext_resource type="Script" path="res://scenes/code.gd" id="2_108tg"]
+[ext_resource type="Texture2D" uid="uid://be6qpb04bx05g" path="res://assets/images/door_closed.png" id="5_ify5w"]
+[ext_resource type="Texture2D" uid="uid://divo0ss2qrri" path="res://assets/images/door_open.png" id="6_3ms8k"]
+[ext_resource type="PackedScene" uid="uid://bfhsdxagsi27d" path="res://scenes/EscapeRoomLevel3.tscn" id="7_3osd7"]
+[ext_resource type="PackedScene" uid="uid://bmmj5008gq35f" path="res://scenes/spikes.tscn" id="7_qcpln"]
+[ext_resource type="AudioStream" uid="uid://c877mxl82yqfs" path="res://assets/music/water-bubbles-257594.mp3" id="9_x0seq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kquxb"]
+size = Vector2(140, 241)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sbya3"]
+
+[node name="Level 2" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1024.0
+offset_bottom = 1024.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_vn6aq")
+metadata/_edit_use_anchors_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(575, 325)
+
+[node name="Code" type="Area2D" parent="."]
+position = Vector2(449, 305)
+script = ExtResource("2_108tg")
+correct_code = null
+door_closed_texture = ExtResource("5_ify5w")
+door_open_texture = ExtResource("6_3ms8k")
+next_level = ExtResource("7_3osd7")
+
+[node name="LineEdit" type="LineEdit" parent="Code"]
+offset_right = 67.0625
+offset_bottom = 31.0
+
+[node name="FeedbackLabel" type="Label" parent="Code"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Door" type="Area2D" parent="Code"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Code/Door"]
+position = Vector2(-243, 56)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_ify5w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Code/Door"]
+position = Vector2(-247, 51)
+shape = SubResource("RectangleShape2D_kquxb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Code"]
+shape = SubResource("RectangleShape2D_sbya3")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "Level 2"
+metadata/_edit_use_anchors_ = true
+
+[node name="TimerLabel" type="Label" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.0338542
+anchor_right = 0.137153
+anchor_bottom = 0.029321
+offset_left = 808.0
+offset_top = 14.0
+offset_right = 848.0
+offset_bottom = 37.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+
+[node name="Spikes" parent="." instance=ExtResource("7_qcpln")]
+
+[node name="SpikeTimer" type="Timer" parent="."]
+wait_time = 20.0
+one_shot = true
+autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_x0seq")
+volume_db = 16.0
+autoplay = true
+
+[connection signal="timeout" from="SpikeTimer" to="Code" method="_on_spike_timer_timeout"]

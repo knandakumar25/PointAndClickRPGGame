@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://ghfqihowy4c4"]
+
+[ext_resource type="Texture2D" uid="uid://d1vq12xjvkl7m" path="res://assets/images/black.png" id="1_q5xsh"]
+[ext_resource type="Script" path="res://scenes/transition_scene_2.gd" id="1_s6rvx"]
+
+[node name="Transition Scene 2" type="Node"]
+script = ExtResource("1_s6rvx")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_q5xsh")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -63.5
+offset_right = 576.0
+offset_bottom = 63.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "After the final crew member sets foot on the ship, you try to get in yourself, but just before you make it, Varuna captures you, and you appear in an other-wordly prison you will try to escape from."
+wrap_mode = 1
+
+[node name="Next" type="Button" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -116.0
+offset_top = -66.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 30
+text = "Next"
+
+[connection signal="pressed" from="Next" to="." method="_on_next_pressed"]

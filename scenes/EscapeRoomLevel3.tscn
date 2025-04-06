@@ -1,14 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://bfhsdxagsi27d"]
 
 [ext_resource type="Texture2D" uid="uid://b7vvvtnvfihul" path="res://assets/images/wall.png" id="1_gr66m"]
-[ext_resource type="Script" path="res://lever.gd" id="2_f78bh"]
-[ext_resource type="Texture2D" uid="uid://bxg0wolb36hsx" path="res://assets/images/leverDown.png" id="3_lj6kh"]
-[ext_resource type="Texture2D" uid="uid://4kxeuwsbhmpu" path="res://assets/images/leverUp.png" id="4_o77go"]
+[ext_resource type="Script" path="res://scenes/code.gd" id="2_pp8am"]
 [ext_resource type="Texture2D" uid="uid://be6qpb04bx05g" path="res://assets/images/door_closed.png" id="5_138v8"]
+[ext_resource type="AudioStream" uid="uid://c877mxl82yqfs" path="res://assets/music/water-bubbles-257594.mp3" id="6_icq5p"]
 [ext_resource type="Texture2D" uid="uid://divo0ss2qrri" path="res://assets/images/door_open.png" id="6_m7lfj"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nvdou"]
-size = Vector2(106, 143)
+[ext_resource type="PackedScene" uid="uid://bmmj5008gq35f" path="res://scenes/spikes.tscn" id="7_6t1wr"]
+[ext_resource type="Texture2D" uid="uid://ch68cp8u8n7oi" path="res://assets/images/varuna.png" id="7_53hg1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ily6c"]
 size = Vector2(140, 241)
@@ -29,49 +27,32 @@ metadata/_edit_use_anchors_ = true
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(575, 325)
 
-[node name="Lever" type="Area2D" parent="."]
-script = ExtResource("2_f78bh")
-lever_on_texture = ExtResource("3_lj6kh")
-lever_off_texture = ExtResource("4_o77go")
+[node name="Code" type="Area2D" parent="."]
+script = ExtResource("2_pp8am")
+correct_code = "IINFTSSS"
 door_closed_texture = ExtResource("5_138v8")
 door_open_texture = ExtResource("6_m7lfj")
 
-[node name="Sprite2D" type="Sprite2D" parent="Lever"]
-position = Vector2(240, 145)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("4_o77go")
+[node name="LineEdit" type="LineEdit" parent="Code"]
+offset_left = 351.0
+offset_top = 406.0
+offset_right = 418.063
+offset_bottom = 437.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Lever"]
-position = Vector2(249, 177.5)
-shape = SubResource("RectangleShape2D_nvdou")
+[node name="FeedbackLabel" type="Label" parent="Code"]
+offset_left = 470.0
+offset_top = 204.0
+offset_right = 597.0
+offset_bottom = 245.0
 
-[node name="Control" type="Control" parent="Lever"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Door" type="Area2D" parent="Code"]
 
-[node name="Label" type="Label" parent="Lever/Control"]
-visible = false
-layout_mode = 0
-offset_left = 89.0
-offset_top = 99.0
-offset_right = 129.0
-offset_bottom = 122.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 30
-text = "Lever"
-
-[node name="Door" type="Area2D" parent="Lever"]
-
-[node name="Sprite2D" type="Sprite2D" parent="Lever/Door"]
+[node name="Sprite2D" type="Sprite2D" parent="Code/Door"]
 position = Vector2(252, 417)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("5_138v8")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Lever/Door"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Code/Door"]
 position = Vector2(253, 418.5)
 shape = SubResource("RectangleShape2D_ily6c")
 
@@ -86,5 +67,69 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "Level 3"
 
-[connection signal="mouse_entered" from="Lever" to="Lever" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Lever" to="Lever" method="_on_mouse_exited"]
+[node name="TimerLabel" type="Label" parent="CanvasLayer"]
+offset_left = 972.0
+offset_right = 1012.0
+offset_bottom = 23.0
+
+[node name="Label2" type="Label" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Spikes" parent="." instance=ExtResource("7_6t1wr")]
+
+[node name="SpikeTimer" type="Timer" parent="."]
+wait_time = 600.0
+one_shot = true
+autostart = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = 582.0
+offset_top = 262.0
+offset_right = 1252.0
+offset_bottom = 519.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "“I do not hide, yet cannot be touched,
+I watch from deep where stars are hushed.
+No lock I bear, yet truth I keep,
+For those who lie shall never sleep.
+
+The sea, the sky — I make them one,
+So speak, and prove what you have done.
+
+Step false, and tides will never part.
+Step true, and enter with a steady heart.”"
+autowrap_mode = 1
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 143.0
+offset_top = 141.0
+offset_right = 813.0
+offset_bottom = 190.0
+text = "When you are with the All Supreme, you need to get all readable with him. For he is the way out."
+autowrap_mode = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_icq5p")
+volume_db = 24.0
+autoplay = true
+
+[node name="Varuna" type="Sprite2D" parent="."]
+position = Vector2(483, 543)
+texture = ExtResource("7_53hg1")
+
+[connection signal="mouse_entered" from="Code" to="Code" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Code" to="Code" method="_on_mouse_exited"]
+[connection signal="timeout" from="SpikeTimer" to="Code" method="_on_spike_timer_timeout"]

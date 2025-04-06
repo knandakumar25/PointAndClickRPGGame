@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmmj5008gq35f"]
+
+[ext_resource type="Texture2D" uid="uid://chr5867ieesgw" path="res://assets/images/spike.png" id="1_wh30b"]
+
+[node name="Spikes" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(75, 75)
+rotation = 3.14159
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_wh30b")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(238, 75)
+rotation = 3.14159
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_wh30b")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(401, 75)
+rotation = 3.14159
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_wh30b")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(564, 75)
+rotation = 3.14159
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_wh30b")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(727, 75)
+rotation = 3.14159
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_wh30b")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(890, 75)
+rotation = 3.14159
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_wh30b")

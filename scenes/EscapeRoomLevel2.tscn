@@ -1,14 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://b3srq506njyhj"]
 
 [ext_resource type="Texture2D" uid="uid://b7vvvtnvfihul" path="res://assets/images/wall.png" id="1_vn6aq"]
-[ext_resource type="Script" path="res://lever.gd" id="2_xmwij"]
-[ext_resource type="Texture2D" uid="uid://bxg0wolb36hsx" path="res://assets/images/leverDown.png" id="3_ixo58"]
-[ext_resource type="Texture2D" uid="uid://4kxeuwsbhmpu" path="res://assets/images/leverUp.png" id="4_cvg1n"]
+[ext_resource type="Script" path="res://scenes/code.gd" id="2_yky2y"]
+[ext_resource type="PackedScene" uid="uid://bmmj5008gq35f" path="res://scenes/spikes.tscn" id="5_06d2a"]
 [ext_resource type="Texture2D" uid="uid://be6qpb04bx05g" path="res://assets/images/door_closed.png" id="5_ify5w"]
 [ext_resource type="Texture2D" uid="uid://divo0ss2qrri" path="res://assets/images/door_open.png" id="6_3ms8k"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nvdou"]
-size = Vector2(106, 143)
+[ext_resource type="AudioStream" uid="uid://c877mxl82yqfs" path="res://assets/music/water-bubbles-257594.mp3" id="6_7mwrs"]
+[ext_resource type="Texture2D" uid="uid://ch68cp8u8n7oi" path="res://assets/images/varuna.png" id="7_sv52e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vv6x2"]
 size = Vector2(140, 241)
@@ -29,49 +27,32 @@ metadata/_edit_use_anchors_ = true
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(575, 325)
 
-[node name="Lever" type="Area2D" parent="."]
-script = ExtResource("2_xmwij")
-lever_on_texture = ExtResource("3_ixo58")
-lever_off_texture = ExtResource("4_cvg1n")
+[node name="Code" type="Area2D" parent="."]
+script = ExtResource("2_yky2y")
+correct_code = "4628"
 door_closed_texture = ExtResource("5_ify5w")
 door_open_texture = ExtResource("6_3ms8k")
 
-[node name="Sprite2D" type="Sprite2D" parent="Lever"]
-position = Vector2(240, 145)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("4_cvg1n")
+[node name="LineEdit" type="LineEdit" parent="Code"]
+offset_left = 351.0
+offset_top = 406.0
+offset_right = 418.063
+offset_bottom = 437.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Lever"]
-position = Vector2(249, 177.5)
-shape = SubResource("RectangleShape2D_nvdou")
+[node name="FeedbackLabel" type="Label" parent="Code"]
+offset_left = 470.0
+offset_top = 204.0
+offset_right = 597.0
+offset_bottom = 245.0
 
-[node name="Control" type="Control" parent="Lever"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Door" type="Area2D" parent="Code"]
 
-[node name="Label" type="Label" parent="Lever/Control"]
-visible = false
-layout_mode = 0
-offset_left = 89.0
-offset_top = 99.0
-offset_right = 129.0
-offset_bottom = 122.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 30
-text = "Lever"
-
-[node name="Door" type="Area2D" parent="Lever"]
-
-[node name="Sprite2D" type="Sprite2D" parent="Lever/Door"]
+[node name="Sprite2D" type="Sprite2D" parent="Code/Door"]
 position = Vector2(252, 417)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("5_ify5w")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Lever/Door"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Code/Door"]
 position = Vector2(253, 418.5)
 shape = SubResource("RectangleShape2D_vv6x2")
 
@@ -86,5 +67,87 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "Level 2"
 
-[connection signal="mouse_entered" from="Lever" to="Lever" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Lever" to="Lever" method="_on_mouse_exited"]
+[node name="TimerLabel" type="Label" parent="CanvasLayer"]
+offset_left = 972.0
+offset_right = 1012.0
+offset_bottom = 23.0
+
+[node name="Label2" type="Label" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "You get to the next scene just to realize a riddle is to be solved."
+
+[node name="Spikes" parent="." instance=ExtResource("5_06d2a")]
+
+[node name="SpikeTimer" type="Timer" parent="."]
+wait_time = 600.0
+one_shot = true
+autostart = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_7mwrs")
+volume_db = 16.0
+autoplay = true
+
+[node name="FirstVerse" type="Label" parent="."]
+offset_left = 724.0
+offset_top = 432.0
+offset_right = 1089.0
+offset_bottom = 533.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "I stand on four though I cannot walk,"
+autowrap_mode = 1
+
+[node name="SecondVerse" type="Label" parent="."]
+offset_left = 29.0
+offset_top = 158.0
+offset_right = 394.0
+offset_bottom = 259.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "Then six sweet notes from music talk."
+autowrap_mode = 1
+
+[node name="ThirdVerse" type="Label" parent="."]
+offset_left = 662.0
+offset_top = 168.0
+offset_right = 1027.0
+offset_bottom = 269.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "A couple wheels on cars will spin,"
+autowrap_mode = 1
+
+[node name="FourthVerse" type="Label" parent="."]
+offset_left = 180.0
+offset_top = 571.0
+offset_right = 545.0
+offset_bottom = 672.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "And legs on spiders end the win."
+autowrap_mode = 1
+
+[node name="Varuna" type="Sprite2D" parent="."]
+position = Vector2(544, 508)
+texture = ExtResource("7_sv52e")
+
+[connection signal="timeout" from="SpikeTimer" to="Code" method="_on_spike_timer_timeout"]
