@@ -40,6 +40,8 @@ func update_door_sprite() -> void:
 
 func give_feedback(message: String) -> void:
 	feedback_label.text = message
+	await get_tree().create_timer(2.0).timeout
+	feedback_label.text = ""
 
 func open_next_room():
 	if (get_tree().current_scene.name == "Level 1"):
@@ -50,7 +52,7 @@ func open_next_room():
 		get_tree().change_scene_to_file("res://scenes/EscapeRoomLevel3.tscn")
 	else:
 		await get_tree().create_timer(5).timeout  # Small delay for effect
-		get_tree().quit()
+		get_tree().change_scene_to_file("res://scenes/transition_scene_2.1.tscn")
 
 func _process(delta: float) -> void:
 	update_timer_display()

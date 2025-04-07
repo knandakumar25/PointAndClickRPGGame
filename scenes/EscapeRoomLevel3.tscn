@@ -29,32 +29,46 @@ position = Vector2(575, 325)
 
 [node name="Code" type="Area2D" parent="."]
 script = ExtResource("2_pp8am")
-correct_code = "IINFTSSS"
+correct_code = "IINIIFTISSS"
 door_closed_texture = ExtResource("5_138v8")
 door_open_texture = ExtResource("6_m7lfj")
 
-[node name="LineEdit" type="LineEdit" parent="Code"]
-offset_left = 351.0
-offset_top = 406.0
-offset_right = 418.063
-offset_bottom = 437.0
-
-[node name="FeedbackLabel" type="Label" parent="Code"]
-offset_left = 470.0
-offset_top = 204.0
-offset_right = 597.0
-offset_bottom = 245.0
-
 [node name="Door" type="Area2D" parent="Code"]
+scale = Vector2(1.2, 1.2)
 
 [node name="Sprite2D" type="Sprite2D" parent="Code/Door"]
-position = Vector2(252, 417)
+position = Vector2(205.833, 386.667)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("5_138v8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Code/Door"]
-position = Vector2(253, 418.5)
+position = Vector2(207.5, 389.167)
 shape = SubResource("RectangleShape2D_ily6c")
+
+[node name="LineEdit" type="LineEdit" parent="Code"]
+offset_left = 187.0
+offset_top = 406.0
+offset_right = 311.0
+offset_bottom = 454.0
+theme_override_font_sizes/font_size = 30
+
+[node name="FeedbackLabel" type="Label" parent="Code"]
+offset_left = 94.0
+offset_top = 608.0
+offset_right = 221.0
+offset_bottom = 664.0
+theme_override_font_sizes/font_size = 30
+
+[node name="Code" type="Label" parent="Code"]
+offset_left = 213.0
+offset_top = 347.0
+offset_right = 270.0
+offset_bottom = 387.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "Code:"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -71,6 +85,7 @@ text = "Level 3"
 offset_left = 972.0
 offset_right = 1012.0
 offset_bottom = 23.0
+theme_override_font_sizes/font_size = 30
 
 [node name="Label2" type="Label" parent="CanvasLayer"]
 anchors_preset = 8
@@ -84,6 +99,7 @@ offset_right = 20.0
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_font_sizes/font_size = 30
 
 [node name="Spikes" parent="." instance=ExtResource("7_6t1wr")]
 
@@ -93,14 +109,14 @@ one_shot = true
 autostart = true
 
 [node name="Label" type="Label" parent="."]
-offset_left = 582.0
-offset_top = 262.0
-offset_right = 1252.0
-offset_bottom = 519.0
+offset_left = 570.0
+offset_top = 190.0
+offset_right = 1036.0
+offset_bottom = 617.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 30
 text = "“I do not hide, yet cannot be touched,
 I watch from deep where stars are hushed.
 No lock I bear, yet truth I keep,
@@ -114,11 +130,15 @@ Step true, and enter with a steady heart.”"
 autowrap_mode = 1
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 143.0
-offset_top = 141.0
-offset_right = 813.0
-offset_bottom = 190.0
-text = "When you are with the All Supreme, you need to get all READABLE with him. For he is the way out."
+offset_left = 15.0
+offset_top = 123.0
+offset_right = 559.0
+offset_bottom = 288.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "When you are with the All Supreme, you need to get all curious with him. For ALL CAPS  is the way out."
 autowrap_mode = 1
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
@@ -127,7 +147,8 @@ volume_db = 24.0
 autoplay = true
 
 [node name="Varuna3" type="Sprite2D" parent="."]
-position = Vector2(453, 536)
+position = Vector2(457, 395)
+scale = Vector2(1.09636, 1.15574)
 texture = ExtResource("7_xlevg")
 
 [connection signal="mouse_entered" from="Code" to="Code" method="_on_mouse_entered"]

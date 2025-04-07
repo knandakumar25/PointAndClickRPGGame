@@ -100,6 +100,7 @@ metadata/_edit_use_anchors_ = true
 offset_left = 972.0
 offset_right = 1012.0
 offset_bottom = 23.0
+theme_override_font_sizes/font_size = 30
 
 [node name="Label2" type="Label" parent="CanvasLayer"]
 anchors_preset = 8
@@ -113,6 +114,7 @@ offset_right = 20.0
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_font_sizes/font_size = 30
 
 [node name="Spikes" parent="." instance=ExtResource("7_5ww1y")]
 
@@ -122,10 +124,11 @@ one_shot = true
 autostart = true
 
 [node name="Label" type="Label" parent="."]
-offset_left = 148.0
-offset_top = 199.0
-offset_right = 829.0
-offset_bottom = 248.0
+offset_left = 147.0
+offset_top = 136.0
+offset_right = 726.0
+offset_bottom = 262.0
+theme_override_font_sizes/font_size = 30
 text = "You realize the key to escape is to solve puzzles. For what secrets are behind, the handle of humanity is all that is needed to be free from trouble."
 autowrap_mode = 1
 
@@ -138,6 +141,7 @@ autoplay = true
 
 [node name="Varuna" type="Sprite2D" parent="Area2D"]
 position = Vector2(441, 425)
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("9_ep1xw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
@@ -145,19 +149,33 @@ position = Vector2(442, 430.5)
 shape = SubResource("RectangleShape2D_o0ia4")
 
 [node name="Varuna2" type="Sprite2D" parent="."]
-position = Vector2(83, 531)
+position = Vector2(82, 494)
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("9_ep1xw")
 
 [node name="Varuna3" type="Sprite2D" parent="."]
 position = Vector2(73, 291)
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("9_ep1xw")
 
 [node name="Varuna4" type="Sprite2D" parent="."]
-position = Vector2(687, 491)
+position = Vector2(628, 497)
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("9_ep1xw")
 
 [node name="Varuna5" type="Sprite2D" parent="."]
-position = Vector2(885, 340)
+position = Vector2(882, 305)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("9_ep1xw")
+
+[node name="Varuna7" type="Sprite2D" parent="."]
+position = Vector2(702, 324)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("9_ep1xw")
+
+[node name="Varuna6" type="Sprite2D" parent="."]
+position = Vector2(836, 499)
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("9_ep1xw")
 
 [connection signal="mouse_entered" from="Lever" to="Lever" method="_on_mouse_entered"]
