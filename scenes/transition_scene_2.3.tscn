@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://djqj2kljxstfa"]
+
+[ext_resource type="Script" path="res://scenes/transition_scene_2.gd" id="1_l20x6"]
+[ext_resource type="Texture2D" uid="uid://d1vq12xjvkl7m" path="res://assets/images/black.png" id="2_a2mf6"]
+
+[node name="Transition Scene 2" type="Node"]
+script = ExtResource("1_l20x6")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_a2mf6")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -444.5
+offset_top = -77.5
+offset_right = 444.5
+offset_bottom = 77.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "When you are with the All Supreme, you need to get all curious with him. For ALL CAPS  is the way out."
+wrap_mode = 1
+
+[node name="Next3" type="Button" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -116.0
+offset_top = -66.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 30
+text = "Next"
+
+[connection signal="pressed" from="Next3" to="." method="_on_next_3_pressed"]

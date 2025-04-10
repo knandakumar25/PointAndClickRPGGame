@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://dq3ukcjigphff"]
+[gd_scene load_steps=3 format=3 uid="uid://ghfqihowy4c4"]
 
 [ext_resource type="Script" path="res://scenes/transition_scene_2.gd" id="1_j1s3t"]
 [ext_resource type="Texture2D" uid="uid://d1vq12xjvkl7m" path="res://assets/images/black.png" id="2_ilmwf"]
@@ -20,18 +20,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -206.0
-offset_top = -78.0
-offset_right = 206.0
-offset_bottom = 78.0
+offset_left = -444.5
+offset_top = -77.5
+offset_right = 444.5
+offset_bottom = 77.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 40
-text = "You have escaped!
-On to your next adventure..."
+theme_override_font_sizes/font_size = 30
+text = "After the final crew member sets foot on the ship, you try to get in yourself, but just before you make it, Varuna captures you, and you appear in an other-wordly prison you will try to escape from. You realize the key to escape is to solve puzzles."
 wrap_mode = 1
 
-[node name="Next2" type="Button" parent="."]
+[node name="Next" type="Button" parent="."]
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -44,4 +43,4 @@ grow_vertical = 0
 theme_override_font_sizes/font_size = 30
 text = "Next"
 
-[connection signal="pressed" from="Next2" to="." method="_on_next_2_pressed"]
+[connection signal="pressed" from="Next" to="." method="_on_next_pressed"]

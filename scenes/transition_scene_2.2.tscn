@@ -1,10 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://ghfqihowy4c4"]
+[gd_scene load_steps=3 format=3 uid="uid://bnjisg4cf48xk"]
 
-[ext_resource type="Texture2D" uid="uid://d1vq12xjvkl7m" path="res://assets/images/black.png" id="1_q5xsh"]
-[ext_resource type="Script" path="res://scenes/transition_scene_2.gd" id="1_s6rvx"]
+[ext_resource type="Script" path="res://scenes/transition_scene_2.gd" id="1_r3pcf"]
+[ext_resource type="Texture2D" uid="uid://d1vq12xjvkl7m" path="res://assets/images/black.png" id="2_i66mg"]
 
 [node name="Transition Scene 2" type="Node"]
-script = ExtResource("1_s6rvx")
+script = ExtResource("1_r3pcf")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 anchors_preset = 15
@@ -12,7 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_q5xsh")
+texture = ExtResource("2_i66mg")
 
 [node name="TextEdit" type="TextEdit" parent="."]
 anchors_preset = 8
@@ -27,10 +27,10 @@ offset_bottom = 77.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 30
-text = "After the final crew member sets foot on the ship, you try to get in yourself, but just before you make it, Varuna captures you, and you appear in an other-wordly prison you will try to escape from."
+text = "You get to the next room just to realize a riddle is to be solved. To exit is to code your way out."
 wrap_mode = 1
 
-[node name="Next" type="Button" parent="."]
+[node name="Next2" type="Button" parent="."]
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -43,4 +43,4 @@ grow_vertical = 0
 theme_override_font_sizes/font_size = 30
 text = "Next"
 
-[connection signal="pressed" from="Next" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="Next2" to="." method="_on_next_2_pressed"]

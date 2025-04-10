@@ -46,13 +46,13 @@ func give_feedback(message: String) -> void:
 func open_next_room():
 	if (get_tree().current_scene.name == "Level 1"):
 		await get_tree().create_timer(5).timeout  # Small delay for effect
-		get_tree().change_scene_to_file("res://scenes/EscapeRoomLevel2.tscn")
+		get_tree().change_scene_to_file("res://scenes/transition_scene_2.2.tscn")
 	elif (get_tree().current_scene.name == "Level 2"):
 		await get_tree().create_timer(5).timeout  # Small delay for effect
-		get_tree().change_scene_to_file("res://scenes/EscapeRoomLevel3.tscn")
+		get_tree().change_scene_to_file("res://scenes/transition_scene_2.3.tscn")
 	else:
 		await get_tree().create_timer(5).timeout  # Small delay for effect
-		get_tree().change_scene_to_file("res://scenes/transition_scene_2.1.tscn")
+		get_tree().change_scene_to_file("res://scenes/transition_scene_2.4.tscn")
 
 func _process(delta: float) -> void:
 	update_timer_display()
