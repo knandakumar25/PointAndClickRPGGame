@@ -29,7 +29,7 @@ position = Vector2(575, 325)
 
 [node name="Code" type="Area2D" parent="."]
 script = ExtResource("2_pp8am")
-correct_code = "IINIIFTISSS"
+correct_code = "HORIZON"
 door_closed_texture = ExtResource("5_138v8")
 door_open_texture = ExtResource("6_m7lfj")
 

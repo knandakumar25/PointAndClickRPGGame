@@ -85,10 +85,17 @@ offset_right = 1012.0
 offset_bottom = 23.0
 theme_override_font_sizes/font_size = 30
 
+[node name="Label2" type="Label" parent="CanvasLayer"]
+offset_left = 95.0
+offset_top = 195.0
+offset_right = 449.0
+offset_bottom = 236.0
+theme_override_font_sizes/font_size = 30
+
 [node name="Spikes" parent="." instance=ExtResource("5_06d2a")]
 
 [node name="SpikeTimer" type="Timer" parent="."]
-wait_time = 20.0
+wait_time = 30.0
 one_shot = true
 autostart = true
 
@@ -106,7 +113,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 30
-text = "I stand on FOUR though I cannot walk"
+text = "I stand on four though I cannot walk"
 autowrap_mode = 1
 
 [node name="SecondVerse" type="Label" parent="."]
@@ -118,7 +125,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 30
-text = "Then SIX  sweet notes from music talk"
+text = "Then six sweet notes from music talk"
 autowrap_mode = 1
 
 [node name="ThirdVerse" type="Label" parent="."]
@@ -130,7 +137,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 30
-text = "A pair I am, not one, but TWO"
+text = "A pair I am, not one, but two"
 autowrap_mode = 1
 
 [node name="FourthVerse" type="Label" parent="."]
@@ -142,7 +149,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 30
-text = "EIGHT I count when spiders tread"
+text = "Eight I count when spiders tread"
 autowrap_mode = 1
 
 [node name="Varuna2" type="Sprite2D" parent="."]

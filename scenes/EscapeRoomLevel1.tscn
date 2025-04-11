@@ -119,7 +119,7 @@ theme_override_font_sizes/font_size = 30
 [node name="Spikes" parent="." instance=ExtResource("7_5ww1y")]
 
 [node name="SpikeTimer" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 15.0
 one_shot = true
 autostart = true
 
@@ -168,13 +168,13 @@ position = Vector2(882, 305)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("9_ep1xw")
 
-[node name="Varuna7" type="Sprite2D" parent="."]
-position = Vector2(702, 324)
+[node name="Varuna6" type="Sprite2D" parent="."]
+position = Vector2(836, 499)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("9_ep1xw")
 
-[node name="Varuna6" type="Sprite2D" parent="."]
-position = Vector2(836, 499)
+[node name="Varuna7" type="Sprite2D" parent="."]
+position = Vector2(702, 324)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("9_ep1xw")
 
