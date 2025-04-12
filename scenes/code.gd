@@ -1,5 +1,7 @@
 extends Area2D
 
+# Used ChatGPT to generate code for the code and the door mechanics
+
 @export var correct_code: String = "1234"  # The code the player must enter
 @export var door_closed_texture: Texture2D
 @export var door_open_texture: Texture2D

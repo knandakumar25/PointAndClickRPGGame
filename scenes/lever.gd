@@ -1,5 +1,7 @@
 extends Area2D
 
+# Used ChatGPT to generate code for the lever and the door mechanics
+
 @export var lever_on_texture: Texture2D
 @export var lever_off_texture: Texture2D
 @export var door_closed_texture: Texture2D
