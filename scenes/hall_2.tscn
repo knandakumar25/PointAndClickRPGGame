@@ -1,25 +1,33 @@
-[gd_scene load_steps=9 format=3 uid="uid://cnk7kdjubu63"]
+[gd_scene load_steps=14 format=3 uid="uid://klf7sv27v2uc"]
 
+[ext_resource type="Script" path="res://scenes/hall_1.gd" id="1_a2wd2"]
 [ext_resource type="Texture2D" uid="uid://dhlhu41l23r2j" path="res://assets/images/white.png" id="1_fdx3v"]
-[ext_resource type="Script" path="res://scenes/code_2.gd" id="2_ib22y"]
-[ext_resource type="Script" path="res://scenes/code_3.gd" id="3_12y3g"]
+[ext_resource type="Script" path="res://scenes/lever_4.gd" id="3_ng1fb"]
+[ext_resource type="Texture2D" uid="uid://bxg0wolb36hsx" path="res://assets/images/leverDown.png" id="4_m3bjr"]
+[ext_resource type="Texture2D" uid="uid://4kxeuwsbhmpu" path="res://assets/images/leverUp.png" id="5_36mxc"]
+[ext_resource type="Script" path="res://scenes/lever_5.gd" id="6_a80jv"]
+[ext_resource type="Texture2D" uid="uid://ch68cp8u8n7oi" path="res://assets/images/varuna.png" id="7_j1l01"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r1dko"]
-size = Vector2(174.5, 43.5)
+size = Vector2(168, 30.7501)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_17781"]
-size = Vector2(425, 43)
+size = Vector2(401.813, 24.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ycu4x"]
-size = Vector2(78, 39)
+size = Vector2(78, 23.5)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sgxe2"]
-size = Vector2(155, 157)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u47ls"]
+size = Vector2(182, 166)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qk2vd"]
-size = Vector2(425, 140)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7iclp"]
+size = Vector2(133, 229)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wla6n"]
+size = Vector2(127, 166.088)
 
 [node name="Hall2" type="Node2D"]
+script = ExtResource("1_a2wd2")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1152.0
@@ -31,13 +39,13 @@ expand_mode = 1
 
 [node name="ColorRect" type="ColorRect" parent="TextureRect/StaticBody2D"]
 offset_left = 467.0
-offset_top = 6.0
-offset_right = 507.0
-offset_bottom = 184.0
+offset_top = 1.0
+offset_right = 497.0
+offset_bottom = 169.0
 color = Color(1, 0, 0, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/StaticBody2D"]
-position = Vector2(489.25, 93.75)
+position = Vector2(479.625, 83)
 rotation = -1.5708
 shape = SubResource("RectangleShape2D_r1dko")
 
@@ -45,57 +53,57 @@ shape = SubResource("RectangleShape2D_r1dko")
 position = Vector2(261, 462)
 
 [node name="ColorRect" type="ColorRect" parent="TextureRect/StaticBody2D4"]
-offset_left = 467.0
+offset_left = 478.0
 offset_top = 6.0
 offset_right = 507.0
 offset_bottom = 184.0
 color = Color(1, 0, 0, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/StaticBody2D4"]
-position = Vector2(489.25, 93.75)
+position = Vector2(491, 91)
 rotation = -1.5708
 shape = SubResource("RectangleShape2D_r1dko")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="TextureRect"]
 
 [node name="ColorRect2" type="ColorRect" parent="TextureRect/StaticBody2D2"]
-offset_top = 184.0
-offset_right = 40.0
-offset_bottom = 569.0
+offset_top = 169.0
+offset_right = 25.0
+offset_bottom = 554.0
 rotation = -1.5708
 color = Color(1, 0, 0, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/StaticBody2D2"]
-position = Vector2(193.25, 164)
+position = Vector2(203.375, 154.75)
 shape = SubResource("RectangleShape2D_17781")
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="TextureRect"]
 position = Vector2(750, 200)
 
 [node name="ColorRect2" type="ColorRect" parent="TextureRect/StaticBody2D5"]
-offset_left = -20.0
+offset_left = -6.0
 offset_top = 184.0
 offset_right = 20.0
-offset_bottom = 605.0
+offset_bottom = 591.0
 rotation = -1.5708
 color = Color(1, 0, 0, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/StaticBody2D5"]
-position = Vector2(190.5, 164)
+position = Vector2(198, 171)
 shape = SubResource("RectangleShape2D_17781")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="TextureRect"]
 
 [node name="ColorRect3" type="ColorRect" parent="TextureRect/StaticBody2D3"]
 offset_left = 386.0
-offset_top = 184.0
-offset_right = 426.0
-offset_bottom = 267.0
+offset_top = 170.0
+offset_right = 412.0
+offset_bottom = 253.0
 rotation = -1.5708
-color = Color(0, 0, 1, 1)
+color = Color(0.588235, 0.294118, 0, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/StaticBody2D3"]
-position = Vector2(428, 163.5)
+position = Vector2(423, 155.25)
 shape = SubResource("RectangleShape2D_ycu4x")
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="TextureRect"]
@@ -104,149 +112,127 @@ rotation = 1.5708
 
 [node name="ColorRect3" type="ColorRect" parent="TextureRect/StaticBody2D6"]
 offset_left = 4.0
-offset_top = -2.99998
-offset_right = 44.0
-offset_bottom = 80.0
+offset_top = -18.0
+offset_right = 29.0
+offset_bottom = 65.0
 rotation = -1.5708
-color = Color(0, 1, 0, 1)
+color = Color(0.588235, 0.294118, 0, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/StaticBody2D6"]
-position = Vector2(44, -21)
+position = Vector2(44.9999, -30.0002)
 shape = SubResource("RectangleShape2D_ycu4x")
 
+[node name="Lever" type="Area2D" parent="TextureRect"]
+script = ExtResource("3_ng1fb")
+lever_on_texture = ExtResource("4_m3bjr")
+lever_off_texture = ExtResource("5_36mxc")
+
+[node name="Sprite2D" type="Sprite2D" parent="TextureRect/Lever"]
+position = Vector2(1035, 169)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("5_36mxc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Lever"]
+position = Vector2(1033, 165)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_u47ls")
+
+[node name="Lever2" type="Area2D" parent="TextureRect"]
+position = Vector2(-200, 0)
+script = ExtResource("6_a80jv")
+lever_on_texture = ExtResource("4_m3bjr")
+lever_off_texture = ExtResource("5_36mxc")
+
+[node name="Sprite2D" type="Sprite2D" parent="TextureRect/Lever2"]
+position = Vector2(1124, 471)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("5_36mxc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Lever2"]
+position = Vector2(1122, 467)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_u47ls")
+
 [node name="BlackVeil" type="ColorRect" parent="TextureRect"]
-layout_mode = 0
-offset_left = -3.0
-offset_top = -3.0
-offset_right = 463.0
-offset_bottom = 141.0
+offset_left = 1.0
+offset_right = 467.0
+offset_bottom = 144.0
 color = Color(0, 0, 0, 1)
 
-[node name="BlackVeil2" type="ColorRect" parent="TextureRect"]
-layout_mode = 0
-offset_left = 768.0
-offset_top = 384.0
-offset_right = 1152.0
-offset_bottom = 643.0
-color = Color(0, 0, 0, 1)
+[node name="Area2D" type="Area2D" parent="."]
 
-[node name="Code" type="Area2D" parent="TextureRect"]
-script = ExtResource("2_ib22y")
-correct_code = "blue"
+[node name="Varuna" type="Sprite2D" parent="Area2D"]
+position = Vector2(1033, 208)
+texture = ExtResource("7_j1l01")
 
-[node name="LineEdit" type="LineEdit" parent="TextureRect/Code"]
-offset_left = 560.0
-offset_top = 49.0
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1034.5, 214.5)
+shape = SubResource("RectangleShape2D_7iclp")
+
+[node name="Area2D2" type="Area2D" parent="."]
+
+[node name="Varuna2" type="Sprite2D" parent="Area2D2"]
+position = Vector2(923, 490)
+scale = Vector2(1, 0.704444)
+texture = ExtResource("7_j1l01")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(922.5, 487.5)
+scale = Vector2(1, 0.704444)
+shape = SubResource("RectangleShape2D_wla6n")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 553.0
+offset_top = 323.0
 offset_right = 616.0
-offset_bottom = 80.0
-theme_override_colors/clear_button_color_pressed = Color(1, 1, 1, 1)
-theme_override_colors/clear_button_color = Color(1, 1, 1, 1)
-theme_override_colors/selection_color = Color(1, 1, 1, 1)
-theme_override_colors/caret_color = Color(1, 1, 1, 1)
-theme_override_colors/font_placeholder_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
-theme_override_colors/font_uneditable_color = Color(1, 1, 1, 1)
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-
-[node name="FeedbackLabel" type="Label" parent="TextureRect/Code"]
-offset_left = 542.0
-offset_top = 102.0
-offset_right = 669.0
-offset_bottom = 143.0
-theme_override_font_sizes/font_size = 30
-
-[node name="Code" type="Label" parent="TextureRect/Code"]
-offset_left = 555.0
-offset_top = 11.0
-offset_right = 612.0
-offset_bottom = 51.0
+offset_bottom = 345.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
-text = "Code:"
+text = "Hall 2"
 
-[node name="Label" type="Label" parent="TextureRect/Code"]
-visible = false
-offset_left = 677.0
-offset_top = 51.0
-offset_right = 1143.0
-offset_bottom = 263.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 30
-text = "I blanket the world but cannot be held,
-I mirror the sun though I’m often cold.
-I weep when I'm heavy, I dance when I'm light,
-In morning I brighten, then fade into night.
-What am I?"
+[node name="Varuna" type="Sprite2D" parent="."]
+position = Vector2(465, 520)
+texture = ExtResource("7_j1l01")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Code"]
-position = Vector2(617.5, 92.5)
-shape = SubResource("RectangleShape2D_sgxe2")
+[node name="Varuna2" type="Sprite2D" parent="."]
+position = Vector2(599, 129)
+texture = ExtResource("7_j1l01")
 
-[node name="Code2" type="Area2D" parent="TextureRect"]
-position = Vector2(-325, 0)
-script = ExtResource("3_12y3g")
-correct_code = "green"
+[node name="Varuna3" type="Sprite2D" parent="."]
+position = Vector2(116, 286)
+texture = ExtResource("7_j1l01")
 
-[node name="LineEdit" type="LineEdit" parent="TextureRect/Code2"]
-offset_left = 681.0
-offset_top = 49.0
-offset_right = 737.0
-offset_bottom = 80.0
-theme_override_colors/clear_button_color_pressed = Color(1, 1, 1, 1)
-theme_override_colors/clear_button_color = Color(1, 1, 1, 1)
-theme_override_colors/selection_color = Color(1, 1, 1, 1)
-theme_override_colors/caret_color = Color(1, 1, 1, 1)
-theme_override_colors/font_placeholder_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
-theme_override_colors/font_uneditable_color = Color(1, 1, 1, 1)
-theme_override_colors/font_color = Color(1, 1, 1, 1)
+[node name="Varuna4" type="Sprite2D" parent="."]
+position = Vector2(151, 521)
+texture = ExtResource("7_j1l01")
 
-[node name="FeedbackLabel" type="Label" parent="TextureRect/Code2"]
-offset_left = 542.0
-offset_top = 102.0
-offset_right = 669.0
-offset_bottom = 143.0
-theme_override_font_sizes/font_size = 30
+[node name="Varuna5" type="Sprite2D" parent="."]
+position = Vector2(320, 323)
+texture = ExtResource("7_j1l01")
 
-[node name="Code" type="Label" parent="TextureRect/Code2"]
-offset_left = 560.0
-offset_top = 7.0
-offset_right = 617.0
-offset_bottom = 47.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 30
-text = "Code:"
+[node name="Varuna6" type="Sprite2D" parent="."]
+position = Vector2(857, 134)
+texture = ExtResource("7_j1l01")
 
-[node name="Label" type="Label" parent="TextureRect/Code2"]
-visible = false
-offset_left = 350.0
-offset_top = 3.0
-offset_right = 650.0
-offset_bottom = 131.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-text = "I dress the earth in vibrant hue,
-From forests deep to morning dew.
-I'm life, I'm luck, a leafy screen—
-In spring I thrive, in fall I'm seen.
-What color am I, so fresh and clean?"
+[node name="Varuna7" type="Sprite2D" parent="."]
+position = Vector2(1079, 510)
+texture = ExtResource("7_j1l01")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Code2"]
-position = Vector2(541.5, 68)
-shape = SubResource("RectangleShape2D_qk2vd")
+[node name="BlackVeil2" type="ColorRect" parent="."]
+offset_left = 768.0
+offset_top = 385.0
+offset_right = 1152.0
+offset_bottom = 644.0
+color = Color(0, 0, 0, 1)
 
-[node name="StaticBody2D7" type="StaticBody2D" parent="TextureRect"]
-
-[connection signal="mouse_entered" from="TextureRect/Code" to="TextureRect/Code" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="TextureRect/Code" to="TextureRect/Code" method="_on_mouse_exited"]
-[connection signal="mouse_entered" from="TextureRect/Code2" to="TextureRect/Code2" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="TextureRect/Code2" to="TextureRect/Code2" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_entered" from="Area2D2" to="." method="_on_area_2d_2_mouse_entered"]
