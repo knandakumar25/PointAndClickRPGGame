@@ -238,5 +238,17 @@ offset_right = 466.0
 offset_bottom = 144.0
 color = Color(0, 0, 0, 1)
 
+[node name="Label2" type="Label" parent="."]
+visible = false
+offset_left = 817.0
+offset_top = 462.0
+offset_right = 879.0
+offset_bottom = 484.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Enter Hall 2"
+
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="Area2D2" to="." method="_on_area_2d_2_mouse_entered"]

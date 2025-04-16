@@ -12,6 +12,7 @@ func update_sprite() -> void:
 	lever_sprite.texture = lever_on_texture
 	$"../StaticBody2D3".hide()
 	$"../BlackVeil".hide()
+	$"../../Label2".show()
 	open_next_room()
 
 

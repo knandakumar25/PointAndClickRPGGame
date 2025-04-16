@@ -216,10 +216,10 @@ offset_bottom = 606.0
 theme_override_font_sizes/font_size = 30
 
 [node name="Code" type="Label" parent="TextureRect/Code2"]
-offset_left = 572.0
-offset_top = 523.0
-offset_right = 629.0
-offset_bottom = 563.0
+offset_left = 675.0
+offset_top = 500.0
+offset_right = 732.0
+offset_bottom = 540.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -268,6 +268,18 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "Hall 4"
 
+[node name="Hint" type="Label" parent="."]
+visible = false
+offset_left = 455.0
+offset_top = 82.0
+offset_right = 670.0
+offset_bottom = 122.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Hint: Type in inverse."
+
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="Varuna" type="Sprite2D" parent="Area2D"]
@@ -314,6 +326,18 @@ offset_top = 503.0
 offset_right = 463.0
 offset_bottom = 647.0
 color = Color(0, 0, 0, 1)
+
+[node name="Label2" type="Label" parent="."]
+visible = false
+offset_left = 895.0
+offset_top = 477.0
+offset_right = 1022.0
+offset_bottom = 517.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Enter Level 3"
 
 [connection signal="mouse_entered" from="TextureRect/Code" to="TextureRect/Code" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="TextureRect/Code" to="TextureRect/Code" method="_on_mouse_exited"]

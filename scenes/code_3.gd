@@ -27,6 +27,7 @@ func update_door_sprite() -> void:
 	if is_code_correct:
 		$"../StaticBody2D6".queue_free()
 		$"../BlackVeil2".queue_free()
+		$"../../Label2".show()
 		open_next_room()
 
 
