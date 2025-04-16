@@ -8,6 +8,7 @@ extends PathFollow2D
 signal clicked_direction(direction)
 
 func _ready():
+	set_rotates(false)
 	set_process(true)
 
 func _process(delta):
@@ -16,10 +17,10 @@ func _process(delta):
 
 func update_click_areas():
 	var directions = {
-		"up": Vector2(0, -distance),
-		"down": Vector2(0, distance),
-		"left": Vector2(-distance, 0),
-		"right": Vector2(distance, 0),
+		"up": Vector2(0, -distance).rotated(-rotation),
+		"down": Vector2(0, distance).rotated(-rotation),
+		"left": Vector2(-distance, 0).rotated(-rotation),
+		"right": Vector2(distance, 0).rotated(-rotation),
 	}
 
 	for dir in directions.keys():
@@ -47,6 +48,9 @@ func update_click_areas():
 			area.connect("input_event", Callable(self, "_on_click_area_input").bind(dir))
 
 		area.position = directions[dir]
+		area.monitoring = true
+		area.set_collision_layer_value(1, true)
+		area.set_collision_mask_value(1, true)
 
 func _on_click_area_input(viewport, event, shape_idx, dir):
 	if event is InputEventMouseButton:
@@ -57,13 +61,13 @@ func _on_click_area_input(viewport, event, shape_idx, dir):
 			match dir:
 				"up":
 					player.position = Vector2(0, 0)
-					player.position += Vector2(0, -move_amount)
+					player.position += Vector2(move_amount, 0)
 				"down":
 					player.position = Vector2(0, 0)
-					player.position += Vector2(0, move_amount)
+					player.position += Vector2(-move_amount, 0)
 				"left":
 					player.position = Vector2(0, 0)
-					player.position += Vector2(-move_amount, 0)
+					player.position += Vector2(0, -move_amount)
 				"right":
 					player.position = Vector2(0, 0)
-					player.position += Vector2(move_amount, 0)
+					player.position += Vector2(0, move_amount)

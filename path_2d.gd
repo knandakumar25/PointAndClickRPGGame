@@ -2,7 +2,7 @@ extends Path2D
 
 @onready var crew = $PathFollow2D/Crew
 @onready var player = $PathFollow2D/Player
-@export var spawn_interval := 2.5
+@export var spawn_interval := 5
 var spawn_timer := 0.0
 var speed := 75.0 
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dxwyfwsg3v6f1"]
+[gd_scene load_steps=12 format=3 uid="uid://dxwyfwsg3v6f1"]
 
 [ext_resource type="Texture2D" uid="uid://6p58g3d6mldr" path="res://BeachPlaceholderImage.jpg" id="1_akqsr"]
 [ext_resource type="Script" path="res://camerga.gd" id="2_j2wnf"]
@@ -13,6 +13,8 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 1129, 623, 0, 0, 0, 0, 1110, 66, 0, 0, 0, 0, 908, 73, 0, 0, 0, 0, 903, 611, 0, 0, 0, 0, 688, 608, 0, 0, 0, 0, 690, 77, 0, 0, 0, 0, 531, 77, 0, 0, 0, 0, 520, 597, 0, 0, 0, 0, 341, 596, 0, 0, 0, 0, 335, 77, 0, 0, 0, 0, 174, 80, 0, 0, 0, 0, 169, 593, 0, 0, 0, 0, 24, 587, 0, 0, 0, 0, 23, 74)
 }
 point_count = 14
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_efg7e"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1nxyk"]
 
@@ -44,30 +46,50 @@ position = Vector2(1129, 623)
 rotation = -1.60489
 script = ExtResource("3_vpte3")
 
-[node name="Player" type="Sprite2D" parent="Path2D/PathFollow2D"]
-position = Vector2(-12.5044, 14.5822)
-rotation = 1.58224
+[node name="Player" type="Area2D" parent="Path2D/PathFollow2D"]
+rotation = 1.5708
 scale = Vector2(0.058904, 0.0527825)
 skew = -0.0117593
-texture = ExtResource("2_w0h7e")
 script = ExtResource("4_5v6uy")
 
+[node name="Sprite2D" type="Sprite2D" parent="Path2D/PathFollow2D/Player"]
+texture = ExtResource("2_w0h7e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/Player"]
+shape = SubResource("CircleShape2D_efg7e")
+
 [node name="Crew" type="Area2D" parent="Path2D/PathFollow2D"]
-position = Vector2(-12.5044, 14.5823)
-rotation = 1.58224
 scale = Vector2(0.058904, 0.0527825)
 skew = -0.0117593
 script = ExtResource("5_yeycg")
 
 [node name="Sprite2D" type="Sprite2D" parent="Path2D/PathFollow2D/Crew"]
+rotation = 1.5708
 texture = ExtResource("2_w0h7e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/Crew"]
 shape = SubResource("CircleShape2D_1nxyk")
 
 [node name="Center" type="Area2D" parent="Path2D/PathFollow2D"]
-position = Vector2(661.127, -1107.1)
-rotation = 1.60489
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/Center"]
 shape = SubResource("CircleShape2D_lp4ol")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BulletLabel" type="Label" parent="CanvasLayer"]
+offset_left = 0.00012207
+offset_top = -0.00012207
+offset_right = 273.0
+offset_bottom = 68.9999
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "Testing 123"
+
+[node name="HealthLabel" type="Label" parent="CanvasLayer"]
+offset_left = 500.0
+offset_right = 773.0
+offset_bottom = 69.0
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "Testing 123"
