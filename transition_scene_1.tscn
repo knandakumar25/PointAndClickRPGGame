@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5tpf38cwsddq"]
+
+[ext_resource type="Texture2D" uid="uid://d1vq12xjvkl7m" path="res://assets/images/black.png" id="1_k3e5s"]
+[ext_resource type="Script" path="res://transition_level1.gd" id="1_lapdv"]
+
+[node name="TransitionScene1" type="Node"]
+script = ExtResource("1_lapdv")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_k3e5s")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -444.0
+offset_top = -240.0
+offset_right = 445.0
+offset_bottom = 211.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "After battling against Varuna, you and the crew decide to go back to the ship and leave the island. But while you all head to the ship, you can see Varuna's forces moving closer and closer towards you all. But they do not seem to be looking to hurt you. It looks like they are looking to hurt the crew! Also, you feel as if a curse has been placed on your gun, disallowing it to be shot in the opposite direction that you are facing. It is your duty to protect the crew and yourself so you all can arrive at the ship safely.
+
+(Just before Varuna's forces arrive, you try to think about how you can protect the crew and how to manuver even with the curse placed on your gun:
+- You start with the crew in the middle. You must click and be in one of the 4 squares around you to be able to shoot
+- To change the tile you are in, click on the square.
+- You have 9 bullets, and once it runs out, you will need to wait 2 seconds before the gun fully reloads
+- Because of the curse, if, for example, you are in the top square, you can only shoot at enemies that are above the above square's center position. If you are in the right square, you can only shoot at enemies that are to the right of the right square's center position. The same applies for the left and below squares.)"
+wrap_mode = 1
+
+[node name="Next" type="Button" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -116.0
+offset_top = -66.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 30
+text = "Next"

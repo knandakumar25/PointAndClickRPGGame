@@ -48,8 +48,9 @@ func create_enemy(crew_node: Node2D, spawn_position: Vector2) -> Area2D:
 	enemy.add_child(sprite)
 
 	var collision = CollisionShape2D.new()
-	var shape = CircleShape2D.new()
-	shape.radius = 8
+	var shape = RectangleShape2D.new()
+	shape.size = Vector2(10,35)
+	#shape.radius = 8
 	collision.shape = shape
 	enemy.add_child(collision)
 

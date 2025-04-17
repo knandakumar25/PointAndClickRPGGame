@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://dxwyfwsg3v6f1"]
+[gd_scene load_steps=41 format=3 uid="uid://dxwyfwsg3v6f1"]
 
 [ext_resource type="Texture2D" uid="uid://dgtlph7jewllx" path="res://assets/images/BackgroundScene1.png" id="1_7sgtb"]
 [ext_resource type="Script" path="res://camerga.gd" id="2_j2wnf"]
@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://cawygqqkojacy" path="res://assets/images/RobertFrame1.png" id="18_hdiag"]
 [ext_resource type="Texture2D" uid="uid://b6pst4fhlpffy" path="res://assets/images/RobertFrame2.png" id="19_jwyvp"]
 [ext_resource type="Texture2D" uid="uid://dcep0fulh8irj" path="res://assets/images/ArjunFrame1.png" id="20_by4fa"]
+[ext_resource type="Script" path="res://beachscene1.gd" id="21_cko6x"]
 [ext_resource type="Texture2D" uid="uid://buq4l3v38yxbr" path="res://assets/images/ArjunFrame2.png" id="21_lvhxx"]
 [ext_resource type="Texture2D" uid="uid://br2vhfjgt0e6w" path="res://assets/images/Palm3.png" id="22_gkm8p"]
 [ext_resource type="Texture2D" uid="uid://cgxm4n20geovt" path="res://assets/images/Palm1.png" id="23_nqmbg"]
@@ -136,6 +137,7 @@ radius = 662.785
 radius = 3.93951
 
 [node name="BeachScene1" type="Node2D"]
+script = ExtResource("21_cko6x")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 visibility_layer = 2
@@ -160,6 +162,7 @@ script = ExtResource("3_nfx6w")
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
 position = Vector2(1225, 566)
 rotation = -1.5585
+loop = false
 script = ExtResource("3_vpte3")
 
 [node name="Player" type="Area2D" parent="Path2D/PathFollow2D"]
@@ -233,7 +236,6 @@ flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/Crew"]
 position = Vector2(271.656, 15.2184)
-scale = Vector2(1, 1)
 shape = SubResource("CircleShape2D_1nxyk")
 
 [node name="Center" type="Area2D" parent="Path2D/PathFollow2D"]
