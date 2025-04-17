@@ -32,19 +32,7 @@ func update_door_sprite() -> void:
 		elif is_instance_valid($"../StaticBody2D6"):
 			$"../StaticBody2D6".queue_free()
 			$"../BlackVeil2".queue_free()
-		open_next_room()
 
-
-func open_next_room():
-	if (get_tree().current_scene.name == "Hall1"):
-		await get_tree().create_timer(5).timeout  # Small delay for effect
-		get_tree().change_scene_to_file("res://scenes/hall_2.tscn")
-	elif (get_tree().current_scene.name == "Hall2"):
-		await get_tree().create_timer(5).timeout  # Small delay for effect
-		get_tree().change_scene_to_file("res://scenes/hall_3.tscn")
-	elif (get_tree().current_scene.name == "Hall3"):
-		await get_tree().create_timer(5).timeout  # Small delay for effect
-		get_tree().change_scene_to_file("res://scenes/transition_scene_2.4.tscn")
 
 func give_feedback(message: String) -> void:
 	feedback_label.text = message
@@ -52,9 +40,9 @@ func give_feedback(message: String) -> void:
 	feedback_label.text = ""
 
 
-func _on_mouse_entered() -> void:
+func _on_body_entered(body: Node2D) -> void:
 	$Label.show()
 
 
-func _on_mouse_exited() -> void:
+func _on_body_exited(body: Node2D) -> void:
 	$Label.hide()
