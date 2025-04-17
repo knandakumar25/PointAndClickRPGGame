@@ -238,7 +238,7 @@ offset_bottom = 214.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 15
 text = "I blanket the world but cannot be held,
 I mirror the sun though I’m often cold.
 I weep when I'm heavy, I dance when I'm light,
@@ -277,9 +277,9 @@ offset_bottom = 143.0
 theme_override_font_sizes/font_size = 30
 
 [node name="Code" type="Label" parent="TextureRect/Code2"]
-offset_left = 560.0
+offset_left = 691.0
 offset_top = 7.0
-offset_right = 617.0
+offset_right = 748.0
 offset_bottom = 47.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -289,14 +289,14 @@ text = "Code:"
 
 [node name="Label" type="Label" parent="TextureRect/Code2"]
 visible = false
-offset_left = 334.0
-offset_top = 400.0
-offset_right = 635.0
-offset_bottom = 547.0
+offset_left = 481.0
+offset_top = 12.0
+offset_right = 782.0
+offset_bottom = 159.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 15
 text = "I dress the earth in vibrant hue,
 From forests deep to morning dew.
 I'm life, I'm luck, a leafy screen—
