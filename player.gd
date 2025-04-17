@@ -319,7 +319,7 @@ func _on_area_entered(area):
 	# bullet sprite
 	var spr = Sprite2D.new()
 	spr.texture = preload("res://bullet.png")
-	spr.scale   = Vector2(0.02, 0.02)
+	spr.scale   = Vector2(0.01, 0.01)
 	bullet.add_child(spr)
 
 	# bullet collision

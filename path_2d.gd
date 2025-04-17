@@ -41,10 +41,11 @@ func create_enemy(crew_node: Node2D, spawn_position: Vector2) -> Area2D:
 
 	enemy.collision_layer = 1
 	enemy.collision_mask = 1
+	enemy.visibility_layer = 1
 
 	var sprite = Sprite2D.new()
-	sprite.texture = preload("res://PlayerPlaceholder.png")
-	sprite.scale = Vector2(0.1, 0.1)
+	sprite.texture = preload("res://enemy.png")
+	sprite.scale = Vector2(0.05, 0.05)
 	enemy.add_child(sprite)
 
 	var collision = CollisionShape2D.new()
