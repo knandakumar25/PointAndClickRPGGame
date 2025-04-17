@@ -6,8 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://darwpb58dqcv0" path="res://assets/images/EscapePlayerFrame3.png" id="4_mt6oq"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_usrts"]
-radius = 28.0
-height = 94.0
+radius = 21.0
+height = 52.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vcs1l"]
 animations = [{
@@ -35,10 +35,11 @@ animations = [{
 script = ExtResource("1_bckc4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -1)
 shape = SubResource("CapsuleShape2D_usrts")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(1, -5)
-scale = Vector2(0.11177, 0.0969047)
+position = Vector2(0, -3)
+scale = Vector2(0.0705601, 0.0517783)
 sprite_frames = SubResource("SpriteFrames_vcs1l")
 animation = &"Walk"

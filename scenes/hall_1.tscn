@@ -173,7 +173,7 @@ color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="EscapePlayer" parent="TextureRect" instance=ExtResource("8_s08ea")]
-position = Vector2(62, 211)
+position = Vector2(58, 598)
 
 [node name="Area2D" type="Area2D" parent="."]
 
