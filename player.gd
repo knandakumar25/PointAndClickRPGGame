@@ -3,8 +3,8 @@ extends Area2D
 @onready var bullet_label: Label = $"../../../CanvasLayer/BulletLabel"
 @onready var parent = get_parent() as PathFollow2D
 var bullet_speed := 400.0
-var bullets_left := 6
-var max_bullets := 6
+var bullets_left := 9
+var max_bullets := 9
 var is_reloading := false
 var reload_popup: Label
 var reload_timer: Timer
@@ -19,7 +19,7 @@ func _ready():
 
 	# Timer for reload
 	reload_timer = Timer.new()
-	reload_timer.wait_time = 3.0
+	reload_timer.wait_time = 2.0
 	reload_timer.one_shot = true
 	reload_timer.connect("timeout", Callable(self, "_on_reload_complete"))
 	add_child(reload_timer)

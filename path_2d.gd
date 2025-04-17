@@ -4,7 +4,7 @@ extends Path2D
 @onready var player = $PathFollow2D/Player
 @export var spawn_interval := 5
 var spawn_timer := 0.0
-var speed := 75.0 
+var speed := 50.0 
 
 func _ready():
 	if crew is Area2D:

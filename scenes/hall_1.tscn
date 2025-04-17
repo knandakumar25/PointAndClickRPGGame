@@ -1,12 +1,14 @@
-[gd_scene load_steps=14 format=3 uid="uid://6xocfmnx62u0"]
+[gd_scene load_steps=16 format=3 uid="uid://6xocfmnx62u0"]
 
-[ext_resource type="Texture2D" uid="uid://dhlhu41l23r2j" path="res://assets/images/white.png" id="1_iqykt"]
 [ext_resource type="Script" path="res://scenes/hall_1.gd" id="1_kogki"]
+[ext_resource type="Texture2D" uid="uid://db61brnw2uq5f" path="res://assets/images/BackgroundScene2.png" id="2_c8nvg"]
 [ext_resource type="Script" path="res://scenes/lever_2.gd" id="2_yuae5"]
 [ext_resource type="Texture2D" uid="uid://bxg0wolb36hsx" path="res://assets/images/leverDown.png" id="3_o8dj2"]
 [ext_resource type="Texture2D" uid="uid://4kxeuwsbhmpu" path="res://assets/images/leverUp.png" id="4_npac7"]
 [ext_resource type="Script" path="res://scenes/lever_3.gd" id="5_3udt5"]
 [ext_resource type="Texture2D" uid="uid://ch68cp8u8n7oi" path="res://assets/images/varuna.png" id="6_p7o6b"]
+[ext_resource type="Texture2D" uid="uid://dx64161hh6dew" path="res://assets/images/Chest.png" id="7_6i4ay"]
+[ext_resource type="PackedScene" uid="uid://dxsh5ghjice43" path="res://scenes/escapePlayer.tscn" id="8_s08ea"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r1dko"]
 size = Vector2(174.5, 26.75)
@@ -21,7 +23,7 @@ size = Vector2(78, 26)
 size = Vector2(182, 166)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7iclp"]
-size = Vector2(133, 229)
+size = Vector2(133, 135.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wla6n"]
 size = Vector2(127, 166.088)
@@ -32,8 +34,9 @@ script = ExtResource("1_kogki")
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1152.0
 offset_bottom = 648.0
-texture = ExtResource("1_iqykt")
+texture = ExtResource("2_c8nvg")
 expand_mode = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="TextureRect"]
 
@@ -43,6 +46,7 @@ offset_top = -2.0
 offset_right = 496.0
 offset_bottom = 176.0
 color = Color(1, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/StaticBody2D"]
 position = Vector2(481.625, 87)
@@ -58,6 +62,7 @@ offset_top = 6.0
 offset_right = 507.0
 offset_bottom = 184.0
 color = Color(1, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/StaticBody2D4"]
 position = Vector2(491, 93)
@@ -73,6 +78,7 @@ offset_right = 26.0
 offset_bottom = 553.0
 rotation = -1.5708
 color = Color(1, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/StaticBody2D2"]
 position = Vector2(201.875, 155.75)
@@ -88,6 +94,7 @@ offset_right = 10.0
 offset_bottom = 605.0
 rotation = -1.5708
 color = Color(1, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/StaticBody2D5"]
 position = Vector2(187, 170)
@@ -102,6 +109,7 @@ offset_right = 414.0
 offset_bottom = 255.0
 rotation = -1.5708
 color = Color(0.588235, 0.294118, 0, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/StaticBody2D3"]
 position = Vector2(428, 157)
@@ -162,15 +170,20 @@ offset_top = 384.0
 offset_right = 1152.0
 offset_bottom = 643.0
 color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="EscapePlayer" parent="TextureRect" instance=ExtResource("8_s08ea")]
+position = Vector2(62, 211)
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="Varuna" type="Sprite2D" parent="Area2D"]
-position = Vector2(590, 98)
-texture = ExtResource("6_p7o6b")
+position = Vector2(597, 63)
+scale = Vector2(0.174154, 0.180664)
+texture = ExtResource("7_6i4ay")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(591.5, 104.5)
+position = Vector2(591, 63.25)
 shape = SubResource("RectangleShape2D_7iclp")
 
 [node name="Area2D2" type="Area2D" parent="."]
@@ -202,6 +215,7 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "Hall 1"
+metadata/_edit_use_anchors_ = true
 
 [node name="Varuna" type="Sprite2D" parent="."]
 position = Vector2(148, 459)
@@ -237,6 +251,7 @@ texture = ExtResource("6_p7o6b")
 offset_right = 466.0
 offset_bottom = 144.0
 color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="Label2" type="Label" parent="."]
 visible = false

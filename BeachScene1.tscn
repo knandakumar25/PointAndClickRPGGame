@@ -34,6 +34,7 @@ texture = ExtResource("1_akqsr")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(3.05176e-05, -2.00002)
 scale = Vector2(0.999998, 0.999999)
+zoom = Vector2(0.75, 0.75)
 script = ExtResource("2_j2wnf")
 
 [node name="Path2D" type="Path2D" parent="."]

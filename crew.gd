@@ -2,7 +2,7 @@ extends Area2D
 
 @onready var health_label: Label = $"../../../CanvasLayer/HealthLabel"
 @onready var parent = get_parent() as PathFollow2D
-var health := 3
+var health := 5
 
 func _ready() -> void:
 	update_health_label()
