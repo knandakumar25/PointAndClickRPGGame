@@ -1,15 +1,19 @@
-[gd_scene load_steps=29 format=3 uid="uid://6xocfmnx62u0"]
+[gd_scene load_steps=33 format=3 uid="uid://6xocfmnx62u0"]
 
 [ext_resource type="Script" path="res://scenes/hall_1.gd" id="1_kogki"]
 [ext_resource type="Texture2D" uid="uid://db61brnw2uq5f" path="res://assets/images/BackgroundScene2.png" id="2_c8nvg"]
 [ext_resource type="Script" path="res://scenes/lever_2.gd" id="2_yuae5"]
+[ext_resource type="Texture2D" uid="uid://iabo235as3f1" path="res://assets/images/Barrels.png" id="3_0u2qu"]
 [ext_resource type="Texture2D" uid="uid://bxg0wolb36hsx" path="res://assets/images/leverDown.png" id="3_o8dj2"]
 [ext_resource type="Texture2D" uid="uid://4kxeuwsbhmpu" path="res://assets/images/leverUp.png" id="4_npac7"]
 [ext_resource type="Script" path="res://scenes/lever_3.gd" id="5_3udt5"]
-[ext_resource type="Texture2D" uid="uid://ch68cp8u8n7oi" path="res://assets/images/varuna.png" id="6_p7o6b"]
 [ext_resource type="Texture2D" uid="uid://dx64161hh6dew" path="res://assets/images/Chest.png" id="7_6i4ay"]
 [ext_resource type="Script" path="res://camerga.gd" id="8_i8q84"]
 [ext_resource type="PackedScene" uid="uid://dxsh5ghjice43" path="res://scenes/escapePlayer.tscn" id="8_s08ea"]
+[ext_resource type="Texture2D" uid="uid://bfo4q6rpt56hl" path="res://assets/images/BeachRock1.png" id="11_m2il8"]
+[ext_resource type="Texture2D" uid="uid://fngc1arri1y1" path="res://assets/images/BeachRock2.png" id="12_l7l8s"]
+[ext_resource type="Texture2D" uid="uid://rlkr0xpun3ck" path="res://assets/images/BeachRock5.png" id="13_ejgfm"]
+[ext_resource type="Texture2D" uid="uid://cgxm4n20geovt" path="res://assets/images/Palm1.png" id="14_ctpaq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r1dko"]
 size = Vector2(174.5, 26.75)
@@ -33,10 +37,10 @@ size = Vector2(28, 159)
 size = Vector2(298, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ncnm3"]
-size = Vector2(411, 20)
+size = Vector2(411, 31)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xe2t1"]
-size = Vector2(145.5, 25)
+size = Vector2(148.75, 25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t3vp2"]
 size = Vector2(32, 76)
@@ -51,7 +55,7 @@ size = Vector2(54.625, 46.5)
 size = Vector2(48.5, 38.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wla6n"]
-size = Vector2(127, 166.088)
+size = Vector2(51.5, 66.0093)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kb22y"]
 size = Vector2(19.5, 650)
@@ -68,12 +72,30 @@ size = Vector2(1157, 19)
 [node name="Hall1" type="Node2D"]
 script = ExtResource("1_kogki")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -510.0
+offset_top = -284.0
+offset_right = 1680.0
+offset_bottom = 1064.0
+color = Color(0, 0, 0, 1)
+
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1152.0
 offset_bottom = 648.0
 texture = ExtResource("2_c8nvg")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
+
+[node name="Barrels2" type="Sprite2D" parent="TextureRect"]
+position = Vector2(68, 35)
+scale = Vector2(0.0572916, 0.0541992)
+texture = ExtResource("3_0u2qu")
+flip_h = true
+
+[node name="Barrels3" type="Sprite2D" parent="TextureRect"]
+position = Vector2(40, 50.0001)
+scale = Vector2(0.046875, 0.0458984)
+texture = ExtResource("3_0u2qu")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="TextureRect"]
 
@@ -197,30 +219,30 @@ shape = SubResource("RectangleShape2D_yo5mp")
 position = Vector2(838, 170)
 
 [node name="ColorRect" type="ColorRect" parent="TextureRect/StaticBody2D13"]
-offset_left = -342.0
-offset_top = -13.0
-offset_right = 72.0
-offset_bottom = 12.0
+offset_left = -345.0
+offset_top = -19.0
+offset_right = 69.0
+offset_bottom = 6.0
 color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/StaticBody2D13"]
-position = Vector2(-137.5, 0)
+position = Vector2(-134, -9)
 shape = SubResource("RectangleShape2D_ncnm3")
 
 [node name="StaticBody2D17" type="StaticBody2D" parent="TextureRect"]
 position = Vector2(1343, 170)
 
 [node name="ColorRect" type="ColorRect" parent="TextureRect/StaticBody2D17"]
-offset_left = -342.0
-offset_top = -13.0
-offset_right = -192.0
-offset_bottom = 12.0
+offset_left = -340.0
+offset_top = -16.0
+offset_right = -190.0
+offset_bottom = 9.0
 color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/StaticBody2D17"]
-position = Vector2(-268.75, -1.5)
+position = Vector2(-264.375, -2)
 shape = SubResource("RectangleShape2D_xe2t1")
 
 [node name="StaticBody2D11" type="StaticBody2D" parent="TextureRect"]
@@ -353,12 +375,12 @@ lever_on_texture = ExtResource("3_o8dj2")
 lever_off_texture = ExtResource("4_npac7")
 
 [node name="Sprite2D" type="Sprite2D" parent="TextureRect/Lever2"]
-position = Vector2(592, 59)
-scale = Vector2(0.1, 0.1)
+position = Vector2(236, 32)
+scale = Vector2(0.0213856, 0.0177734)
 texture = ExtResource("4_npac7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Lever2"]
-position = Vector2(590, 55)
+position = Vector2(235, 32)
 scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_u47ls")
 
@@ -377,7 +399,7 @@ position = Vector2(62, 612)
 [node name="Camera2D" type="Camera2D" parent="TextureRect/EscapePlayer"]
 position = Vector2(3.05176e-05, -2.00002)
 scale = Vector2(0.999998, 0.999999)
-zoom = Vector2(0.75, 0.75)
+zoom = Vector2(1.5, 1.5)
 script = ExtResource("8_i8q84")
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -394,12 +416,12 @@ shape = SubResource("RectangleShape2D_7iclp")
 [node name="Area2D2" type="Area2D" parent="."]
 
 [node name="Varuna2" type="Sprite2D" parent="Area2D2"]
-position = Vector2(391, 78)
-scale = Vector2(1, 0.704444)
-texture = ExtResource("6_p7o6b")
+position = Vector2(44, 34)
+scale = Vector2(0.0677083, 0.0579469)
+texture = ExtResource("3_0u2qu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2(390.5, 75.5)
+position = Vector2(42, 33)
 scale = Vector2(1, 0.704444)
 shape = SubResource("RectangleShape2D_wla6n")
 
@@ -422,19 +444,11 @@ theme_override_font_sizes/font_size = 30
 text = "Hall 1"
 metadata/_edit_use_anchors_ = true
 
-[node name="Varuna6" type="Sprite2D" parent="."]
-position = Vector2(88, 76.75)
-scale = Vector2(1, 0.704444)
-texture = ExtResource("6_p7o6b")
-
-[node name="Varuna7" type="Sprite2D" parent="."]
-position = Vector2(220, 76.75)
-scale = Vector2(1, 0.704444)
-texture = ExtResource("6_p7o6b")
-
 [node name="BlackVeil" type="ColorRect" parent="."]
-offset_right = 466.0
-offset_bottom = 144.0
+offset_left = 3.0
+offset_top = -1.0
+offset_right = 469.0
+offset_bottom = 143.0
 color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
 
@@ -474,6 +488,31 @@ position = Vector2(958, 670)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
 position = Vector2(-384.5, -16.5)
 shape = SubResource("RectangleShape2D_yd12w")
+
+[node name="Barrels" type="Sprite2D" parent="."]
+position = Vector2(187, 362)
+scale = Vector2(0.046875, 0.0458984)
+texture = ExtResource("3_0u2qu")
+
+[node name="BeachRock1" type="Sprite2D" parent="."]
+position = Vector2(38, 202)
+scale = Vector2(0.104869, 0.114583)
+texture = ExtResource("11_m2il8")
+
+[node name="BeachRock2" type="Sprite2D" parent="."]
+position = Vector2(551, 31)
+scale = Vector2(0.187697, 0.204762)
+texture = ExtResource("12_l7l8s")
+
+[node name="BeachRock5" type="Sprite2D" parent="."]
+position = Vector2(453, 515)
+scale = Vector2(0.139623, 0.151163)
+texture = ExtResource("13_ejgfm")
+
+[node name="Palm1" type="Sprite2D" parent="."]
+position = Vector2(1098, 54.9999)
+scale = Vector2(0.271429, 0.213992)
+texture = ExtResource("14_ctpaq")
 
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="Area2D2" to="." method="_on_area_2d_2_mouse_entered"]

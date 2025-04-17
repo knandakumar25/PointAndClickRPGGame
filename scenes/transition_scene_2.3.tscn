@@ -1,10 +1,29 @@
 [gd_scene load_steps=3 format=3 uid="uid://djqj2kljxstfa"]
 
-[ext_resource type="Script" path="res://scenes/transition_scene_2.gd" id="1_l20x6"]
 [ext_resource type="Texture2D" uid="uid://d1vq12xjvkl7m" path="res://assets/images/black.png" id="2_a2mf6"]
 
+[sub_resource type="GDScript" id="GDScript_c4ki2"]
+script/source = "extends Node
+
+
+func _on_next_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://scenes/EscapeRoomLevel1.tscn\")
+
+
+func _on_next_2_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://scenes/EscapeRoomLevel2.tscn\")
+
+
+func _on_next_3_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://scenes/EscapeRoomLevel3.tscn\")
+
+
+func _on_next_4_pressed() -> void:
+	get_tree().quit()
+"
+
 [node name="Transition Scene 2" type="Node"]
-script = ExtResource("1_l20x6")
+script = SubResource("GDScript_c4ki2")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 anchors_preset = 15

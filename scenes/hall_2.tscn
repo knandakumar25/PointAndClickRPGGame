@@ -16,7 +16,7 @@ size = Vector2(168, 30.7501)
 size = Vector2(401.813, 24.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ycu4x"]
-size = Vector2(78, 23.5)
+size = Vector2(29, 79.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aela1"]
 size = Vector2(174.5, 26.75)
@@ -78,6 +78,13 @@ size = Vector2(1157, 19)
 [node name="Hall2" type="Node2D"]
 script = ExtResource("1_a2wd2")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -510.0
+offset_top = -284.0
+offset_right = 1680.0
+offset_bottom = 1064.0
+color = Color(0, 0, 0, 1)
+
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1152.0
 offset_bottom = 648.0
@@ -123,7 +130,7 @@ rotation = -1.5708
 color = Color(1, 0, 0, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/StaticBody2D2"]
-position = Vector2(203.375, 154.75)
+position = Vector2(182, 156)
 shape = SubResource("RectangleShape2D_17781")
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="TextureRect"]
@@ -144,15 +151,15 @@ shape = SubResource("RectangleShape2D_17781")
 [node name="StaticBody2D3" type="StaticBody2D" parent="TextureRect"]
 
 [node name="ColorRect3" type="ColorRect" parent="TextureRect/StaticBody2D3"]
-offset_left = 386.0
-offset_top = 170.0
-offset_right = 412.0
-offset_bottom = 253.0
+offset_left = 381.0
+offset_top = 643.0
+offset_right = 459.0
+offset_bottom = 676.0
 rotation = -1.5708
 color = Color(0.588235, 0.294118, 0, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/StaticBody2D3"]
-position = Vector2(423, 155.25)
+position = Vector2(395.5, 603.125)
 shape = SubResource("RectangleShape2D_ycu4x")
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="TextureRect"]
@@ -173,18 +180,19 @@ shape = SubResource("RectangleShape2D_ycu4x")
 
 [node name="BlackVeil3" type="ColorRect" parent="TextureRect"]
 layout_mode = 0
-offset_left = 1.0
-offset_right = 467.0
-offset_bottom = 144.0
+offset_left = 410.0
+offset_top = 566.0
+offset_right = 740.0
+offset_bottom = 641.0
 color = Color(0, 0, 0, 1)
 
 [node name="EscapePlayer" parent="TextureRect" instance=ExtResource("7_mypp5")]
-position = Vector2(66, 605)
+position = Vector2(66, 100)
 
 [node name="Camera2D" type="Camera2D" parent="TextureRect/EscapePlayer"]
-position = Vector2(3.05176e-05, -2.00002)
+position = Vector2(2.18279e-11, 5.99998)
 scale = Vector2(0.999998, 0.999999)
-zoom = Vector2(0.75, 0.75)
+zoom = Vector2(1.5, 1.5)
 script = ExtResource("8_jaxu5")
 
 [node name="StaticBody2D7" type="StaticBody2D" parent="TextureRect"]
@@ -362,7 +370,7 @@ position = Vector2(-194, -47.5)
 shape = SubResource("RectangleShape2D_auulw")
 
 [node name="Code" type="Area2D" parent="TextureRect"]
-position = Vector2(425, 150)
+position = Vector2(420, 154)
 script = ExtResource("5_tw4ro")
 correct_code = "462"
 
