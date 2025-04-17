@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://cnk7kdjubu63"]
+[gd_scene load_steps=34 format=3 uid="uid://cnk7kdjubu63"]
 
 [ext_resource type="Script" path="res://scenes/hall_3.gd" id="1_w8d57"]
 [ext_resource type="Texture2D" uid="uid://rn0stskgvt2j" path="res://assets/images/Background2.png" id="2_87b7r"]
@@ -13,7 +13,13 @@
 size = Vector2(174.5, 29.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_17781"]
-size = Vector2(404.75, 26.5)
+size = Vector2(281, 26.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_makiq"]
+size = Vector2(94.5, 27)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rmmwx"]
+size = Vector2(397, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ycu4x"]
 size = Vector2(78, 25)
@@ -23,12 +29,6 @@ size = Vector2(79, 65)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qk2vd"]
 size = Vector2(425, 140)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hdg6b"]
-size = Vector2(168, 30.7501)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_74bjw"]
-size = Vector2(174.5, 26.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yf0x0"]
 size = Vector2(378.5, 19)
@@ -81,6 +81,9 @@ size = Vector2(11, 644)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t0kar"]
 size = Vector2(1157, 19)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ogp50"]
+size = Vector2(353, 239)
+
 [node name="Hall3" type="Node2D"]
 script = ExtResource("1_w8d57")
 
@@ -112,7 +115,7 @@ rotation = -1.5708
 shape = SubResource("RectangleShape2D_r1dko")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="TextureRect"]
-position = Vector2(261, 462)
+position = Vector2(260, 377)
 
 [node name="ColorRect" type="ColorRect" parent="TextureRect/StaticBody2D4"]
 offset_left = 484.0
@@ -131,13 +134,28 @@ shape = SubResource("RectangleShape2D_r1dko")
 [node name="ColorRect2" type="ColorRect" parent="TextureRect/StaticBody2D2"]
 offset_top = 170.0
 offset_right = 26.0
-offset_bottom = 555.0
+offset_bottom = 454.0
 rotation = -1.5708
 color = Color(1, 0, 0, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/StaticBody2D2"]
-position = Vector2(203.375, 155.75)
+position = Vector2(141.5, 155.75)
 shape = SubResource("RectangleShape2D_17781")
+
+[node name="StaticBody2D14" type="StaticBody2D" parent="TextureRect"]
+position = Vector2(182, 0)
+
+[node name="ColorRect2" type="ColorRect" parent="TextureRect/StaticBody2D14"]
+offset_left = 189.0
+offset_top = 170.0
+offset_right = 215.0
+offset_bottom = 265.0
+rotation = -1.5708
+color = Color(1, 0, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/StaticBody2D14"]
+position = Vector2(235.75, 159.5)
+shape = SubResource("RectangleShape2D_makiq")
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="TextureRect"]
 position = Vector2(750, 200)
@@ -151,10 +169,11 @@ rotation = -1.5708
 color = Color(1, 0, 0, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/StaticBody2D5"]
-position = Vector2(198, 170)
-shape = SubResource("RectangleShape2D_17781")
+position = Vector2(197.5, 170)
+shape = SubResource("RectangleShape2D_rmmwx")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="TextureRect"]
+position = Vector2(-101, 0)
 
 [node name="ColorRect3" type="ColorRect" parent="TextureRect/StaticBody2D3"]
 offset_left = 386.0
@@ -163,13 +182,14 @@ offset_right = 416.0
 offset_bottom = 257.0
 rotation = -1.5708
 color = Color(0, 0, 1, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/StaticBody2D3"]
 position = Vector2(428, 156.5)
 shape = SubResource("RectangleShape2D_ycu4x")
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="TextureRect"]
-position = Vector2(727, 383)
+position = Vector2(721, 558)
 rotation = 1.5708
 
 [node name="ColorRect3" type="ColorRect" parent="TextureRect/StaticBody2D6"]
@@ -307,21 +327,6 @@ What color am I, so fresh and clean?"
 position = Vector2(541.5, 68)
 shape = SubResource("RectangleShape2D_qk2vd")
 
-[node name="StaticBody2D7" type="StaticBody2D" parent="TextureRect"]
-position = Vector2(261, 462)
-
-[node name="ColorRect" type="ColorRect" parent="TextureRect/StaticBody2D7"]
-offset_left = 478.0
-offset_top = 6.0
-offset_right = 507.0
-offset_bottom = 184.0
-color = Color(1, 0, 0, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/StaticBody2D7"]
-position = Vector2(491, 91)
-rotation = -1.5708
-shape = SubResource("RectangleShape2D_hdg6b")
-
 [node name="EscapePlayer" parent="TextureRect" instance=ExtResource("6_p64kr")]
 position = Vector2(71, 607)
 
@@ -330,22 +335,6 @@ position = Vector2(3.05176e-05, -2.00002)
 scale = Vector2(0.999998, 0.999999)
 zoom = Vector2(1.5, 1.5)
 script = ExtResource("7_u3ams")
-
-[node name="StaticBody2D8" type="StaticBody2D" parent="TextureRect"]
-position = Vector2(261, 462)
-
-[node name="ColorRect" type="ColorRect" parent="TextureRect/StaticBody2D8"]
-offset_left = 477.0
-offset_top = 6.0
-offset_right = 507.0
-offset_bottom = 184.0
-color = Color(1, 0, 0, 1)
-metadata/_edit_use_anchors_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/StaticBody2D8"]
-position = Vector2(491, 93)
-rotation = -1.5708
-shape = SubResource("RectangleShape2D_74bjw")
 
 [node name="StaticBody2D9" type="StaticBody2D" parent="TextureRect"]
 position = Vector2(0, 396)
@@ -617,9 +606,16 @@ position = Vector2(958, 670)
 position = Vector2(-384.5, -16.5)
 shape = SubResource("RectangleShape2D_t0kar")
 
-[connection signal="mouse_entered" from="TextureRect/Code" to="TextureRect/Code" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="TextureRect/Code" to="TextureRect/Code" method="_on_mouse_exited"]
-[connection signal="mouse_entered" from="TextureRect/Code2" to="TextureRect/Code2" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="TextureRect/Code2" to="TextureRect/Code2" method="_on_mouse_exited"]
-[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_entered" from="Area2D2" to="." method="_on_area_2d_2_mouse_entered"]
+[node name="Area2D3" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
+position = Vector2(958.5, 513.5)
+shape = SubResource("RectangleShape2D_ogp50")
+
+[connection signal="body_entered" from="TextureRect/Code" to="TextureRect/Code" method="_on_body_entered"]
+[connection signal="body_exited" from="TextureRect/Code" to="TextureRect/Code" method="_on_body_exited"]
+[connection signal="body_entered" from="TextureRect/Code2" to="TextureRect/Code2" method="_on_body_entered"]
+[connection signal="body_exited" from="TextureRect/Code2" to="TextureRect/Code2" method="_on_body_exited"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
+[connection signal="body_entered" from="Area2D3" to="." method="_on_area_2d_3_body_entered"]

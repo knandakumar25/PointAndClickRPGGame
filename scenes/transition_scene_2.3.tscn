@@ -7,19 +7,19 @@ script/source = "extends Node
 
 
 func _on_next_pressed() -> void:
-	get_tree().change_scene_to_file(\"res://scenes/EscapeRoomLevel1.tscn\")
+	get_tree().change_scene_to_file(\"res://scenes/hall_1.tscn\")
 
 
 func _on_next_2_pressed() -> void:
-	get_tree().change_scene_to_file(\"res://scenes/EscapeRoomLevel2.tscn\")
+	get_tree().change_scene_to_file(\"res://scenes/hall_2.tscn\")
 
 
 func _on_next_3_pressed() -> void:
-	get_tree().change_scene_to_file(\"res://scenes/EscapeRoomLevel3.tscn\")
+	get_tree().change_scene_to_file(\"res://scenes/hall_3.tscn\")
 
 
 func _on_next_4_pressed() -> void:
-	get_tree().quit()
+	get_tree().change_scene_to_file(\"res://scenes/DialogueScene.tscn\")
 "
 
 [node name="Transition Scene 2" type="Node"]
@@ -46,7 +46,7 @@ offset_bottom = 77.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 30
-text = "When you are with the All Supreme, you need to get all curious with him. For ALL CAPS  is the way out."
+text = "When you are with the All Supreme, you need to get all curious with him. For getting all colorful with him  is the way out."
 wrap_mode = 1
 
 [node name="Next3" type="Button" parent="."]

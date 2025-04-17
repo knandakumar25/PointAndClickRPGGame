@@ -38,9 +38,9 @@ func give_feedback(message: String) -> void:
 	feedback_label.text = ""
 
 
-func _on_mouse_entered() -> void:
+func _on_body_entered(body: Node2D) -> void:
 	$Label.show()
 
 
-func _on_mouse_exited() -> void:
+func _on_body_exited(body: Node2D) -> void:
 	$Label.hide()

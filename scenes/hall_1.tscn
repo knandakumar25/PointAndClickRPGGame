@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://6xocfmnx62u0"]
+[gd_scene load_steps=33 format=3 uid="uid://6xocfmnx62u0"]
 
 [ext_resource type="Script" path="res://scenes/hall_1.gd" id="1_kogki"]
 [ext_resource type="Texture2D" uid="uid://db61brnw2uq5f" path="res://assets/images/BackgroundScene2.png" id="2_c8nvg"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bfo4q6rpt56hl" path="res://assets/images/BeachRock1.png" id="11_m2il8"]
 [ext_resource type="Texture2D" uid="uid://fngc1arri1y1" path="res://assets/images/BeachRock2.png" id="12_l7l8s"]
 [ext_resource type="Texture2D" uid="uid://rlkr0xpun3ck" path="res://assets/images/BeachRock5.png" id="13_ejgfm"]
+[ext_resource type="Texture2D" uid="uid://cgxm4n20geovt" path="res://assets/images/Palm1.png" id="14_ctpaq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r1dko"]
 size = Vector2(174.5, 26.75)
@@ -507,6 +508,11 @@ texture = ExtResource("12_l7l8s")
 position = Vector2(453, 515)
 scale = Vector2(0.139623, 0.151163)
 texture = ExtResource("13_ejgfm")
+
+[node name="Palm1" type="Sprite2D" parent="."]
+position = Vector2(1098, 54.9999)
+scale = Vector2(0.271429, 0.213992)
+texture = ExtResource("14_ctpaq")
 
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="Area2D2" to="." method="_on_area_2d_2_mouse_entered"]
