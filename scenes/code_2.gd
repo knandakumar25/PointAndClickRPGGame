@@ -25,8 +25,12 @@ func check_code_input(entered_code: String) -> void:
 
 func update_door_sprite() -> void:
 	if is_code_correct:
-		$"../StaticBody2D3".queue_free()
-		$"../../BlackVeil".queue_free()
+		if (is_instance_valid($"../../BlackVeil")):
+			$"../../BlackVeil".queue_free()
+			$"../StaticBody2D3".queue_free()
+		elif (is_instance_valid($"../../BlackVeil2")):
+			$"../../BlackVeil2".queue_free()
+			$"../StaticBody2D6".queue_free()
 
 func give_feedback(message: String) -> void:
 	feedback_label.text = message
