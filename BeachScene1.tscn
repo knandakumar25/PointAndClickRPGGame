@@ -1,12 +1,27 @@
-[gd_scene load_steps=12 format=3 uid="uid://dxwyfwsg3v6f1"]
+[gd_scene load_steps=33 format=3 uid="uid://dxwyfwsg3v6f1"]
 
-[ext_resource type="Texture2D" uid="uid://6p58g3d6mldr" path="res://BeachPlaceholderImage.jpg" id="1_akqsr"]
+[ext_resource type="Texture2D" uid="uid://dgtlph7jewllx" path="res://assets/images/BackgroundScene1.png" id="1_7sgtb"]
 [ext_resource type="Script" path="res://camerga.gd" id="2_j2wnf"]
 [ext_resource type="Texture2D" uid="uid://c3avgdwo5shke" path="res://PlayerPlaceholder.png" id="2_w0h7e"]
 [ext_resource type="Script" path="res://path_2d.gd" id="3_nfx6w"]
 [ext_resource type="Script" path="res://path_follow_2d.gd" id="3_vpte3"]
 [ext_resource type="Script" path="res://player.gd" id="4_5v6uy"]
 [ext_resource type="Script" path="res://crew.gd" id="5_yeycg"]
+[ext_resource type="Texture2D" uid="uid://dj1ol0gvg54qm" path="res://assets/images/AndrewFrame1.png" id="8_gpfkv"]
+[ext_resource type="Texture2D" uid="uid://br30nk6m7s05i" path="res://assets/images/AndrewFrame2.png" id="9_e3cm2"]
+[ext_resource type="Texture2D" uid="uid://cfqeqv1ebs3gi" path="res://assets/images/RaulFrame1.png" id="10_kmvuk"]
+[ext_resource type="Texture2D" uid="uid://bn6af8lm3iqlb" path="res://assets/images/RaulFrame2.png" id="11_hpund"]
+[ext_resource type="Texture2D" uid="uid://byqkpybnd1nx5" path="res://assets/images/RaulFrame3.png" id="12_nxgqd"]
+[ext_resource type="Texture2D" uid="uid://cuq4pg4qkopmc" path="res://assets/images/MastanFrame1.png" id="13_k3jfa"]
+[ext_resource type="Texture2D" uid="uid://c02v47hjg7y5c" path="res://assets/images/MastanFrame2.png" id="14_cnvra"]
+[ext_resource type="Texture2D" uid="uid://djm5qxiydfk8i" path="res://assets/images/HancockFrame1.png" id="15_i0rue"]
+[ext_resource type="Texture2D" uid="uid://cq3dbiwjiprvs" path="res://assets/images/HancockFrame2.png" id="16_v33wt"]
+[ext_resource type="Texture2D" uid="uid://dpf5rmvpnlhb" path="res://assets/images/HancockFrame3.png" id="17_axjpu"]
+[ext_resource type="Texture2D" uid="uid://cawygqqkojacy" path="res://assets/images/RobertFrame1.png" id="18_hdiag"]
+[ext_resource type="Texture2D" uid="uid://b6pst4fhlpffy" path="res://assets/images/RobertFrame2.png" id="19_jwyvp"]
+[ext_resource type="Texture2D" uid="uid://dcep0fulh8irj" path="res://assets/images/ArjunFrame1.png" id="20_by4fa"]
+[ext_resource type="Texture2D" uid="uid://buq4l3v38yxbr" path="res://assets/images/ArjunFrame2.png" id="21_lvhxx"]
+[ext_resource type="Texture2D" uid="uid://iabo235as3f1" path="res://assets/images/Barrels.png" id="22_yt4js"]
 
 [sub_resource type="Curve2D" id="Curve2D_0uuj1"]
 _data = {
@@ -16,20 +31,111 @@ point_count = 14
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_efg7e"]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_7vh7k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_k3jfa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_cnvra")
+}],
+"loop": true,
+"name": &"MastanWalk",
+"speed": 2.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0m16w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_gpfkv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_e3cm2")
+}],
+"loop": true,
+"name": &"AndrewWalk",
+"speed": 2.0
+}]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_1nxyk"]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_pyh8b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_kmvuk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_hpund")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_nxgqd")
+}],
+"loop": true,
+"name": &"RaulWalk",
+"speed": 3.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_517o0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_i0rue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_v33wt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_axjpu")
+}],
+"loop": true,
+"name": &"HancockWalk",
+"speed": 3.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u3rfi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_hdiag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_jwyvp")
+}],
+"loop": true,
+"name": &"RobertWalk",
+"speed": 2.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7bhs2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_by4fa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_lvhxx")
+}],
+"loop": true,
+"name": &"ArjunWalk",
+"speed": 2.0
+}]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_lp4ol"]
+radius = 22.3607
 
 [node name="BeachScene1" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 visibility_layer = 2
-offset_left = -864.0
-offset_top = -490.0
-offset_right = 12063.0
-offset_bottom = 7781.0
+offset_left = -425.0
+offset_top = -294.0
+offset_right = 9820.0
+offset_bottom = 6216.0
 scale = Vector2(0.228898, 0.210749)
-texture = ExtResource("1_akqsr")
+texture = ExtResource("1_7sgtb")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(3.05176e-05, -2.00002)
@@ -64,16 +170,57 @@ scale = Vector2(0.058904, 0.0527825)
 skew = -0.0117593
 script = ExtResource("5_yeycg")
 
-[node name="Sprite2D" type="Sprite2D" parent="Path2D/PathFollow2D/Crew"]
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="Path2D/PathFollow2D/Crew"]
+position = Vector2(199.999, 200)
 rotation = 1.5708
-texture = ExtResource("2_w0h7e")
+sprite_frames = SubResource("SpriteFrames_7vh7k")
+animation = &"MastanWalk"
+centered = false
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Path2D/PathFollow2D/Crew"]
+rotation = 1.5708
+sprite_frames = SubResource("SpriteFrames_0m16w")
+animation = &"AndrewWalk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/Crew"]
 shape = SubResource("CircleShape2D_1nxyk")
 
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Path2D/PathFollow2D/Crew"]
+rotation = 1.5708
+sprite_frames = SubResource("SpriteFrames_pyh8b")
+animation = &"RaulWalk"
+frame_progress = 0.529274
+centered = false
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="Path2D/PathFollow2D/Crew"]
+position = Vector2(-300, -300)
+rotation = 1.5708
+sprite_frames = SubResource("SpriteFrames_517o0")
+animation = &"HancockWalk"
+centered = false
+flip_h = true
+
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="Path2D/PathFollow2D/Crew"]
+position = Vector2(0, -400)
+rotation = 1.5708
+sprite_frames = SubResource("SpriteFrames_u3rfi")
+animation = &"RobertWalk"
+centered = false
+flip_h = true
+
+[node name="AnimatedSprite2D6" type="AnimatedSprite2D" parent="Path2D/PathFollow2D/Crew"]
+position = Vector2(400, 400)
+rotation = 1.5708
+sprite_frames = SubResource("SpriteFrames_7bhs2")
+animation = &"ArjunWalk"
+centered = false
+flip_h = true
+
 [node name="Center" type="Area2D" parent="Path2D/PathFollow2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/Center"]
+position = Vector2(-18.3987, 11.3794)
+scale = Vector2(2, 2)
 shape = SubResource("CircleShape2D_lp4ol")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -94,3 +241,43 @@ offset_bottom = 69.0
 theme_override_colors/font_color = Color(0, 1, 1, 1)
 theme_override_font_sizes/font_size = 50
 text = "Testing 123"
+
+[node name="Barrels" type="Sprite2D" parent="."]
+position = Vector2(1104, 24)
+scale = Vector2(0.0953776, 0.102051)
+texture = ExtResource("22_yt4js")
+
+[node name="Barrels" type="Sprite2D" parent="Barrels"]
+position = Vector2(-2579.22, 646.737)
+scale = Vector2(1.15146, 1.18548)
+texture = ExtResource("22_yt4js")
+
+[node name="Barrels" type="Sprite2D" parent="Barrels/Barrels"]
+position = Vector2(509.907, 4769.41)
+scale = Vector2(1.08364, 0.972028)
+texture = ExtResource("22_yt4js")
+
+[node name="Barrels" type="Sprite2D" parent="Barrels/Barrels/Barrels"]
+position = Vector2(-2487.19, -773.84)
+scale = Vector2(0.789559, 0.999206)
+texture = ExtResource("22_yt4js")
+
+[node name="Barrels" type="Sprite2D" parent="Barrels/Barrels/Barrels/Barrels"]
+position = Vector2(446.974, -4714.81)
+scale = Vector2(1.24121, 1.09971)
+texture = ExtResource("22_yt4js")
+
+[node name="Barrels" type="Sprite2D" parent="Barrels/Barrels/Barrels/Barrels/Barrels"]
+position = Vector2(-1671.94, 673.28)
+scale = Vector2(0.936572, 1.04029)
+texture = ExtResource("22_yt4js")
+
+[node name="Barrels" type="Sprite2D" parent="Barrels/Barrels/Barrels/Barrels/Barrels/Barrels"]
+position = Vector2(-173.939, 4069.21)
+scale = Vector2(1.05737, 0.964745)
+texture = ExtResource("22_yt4js")
+
+[node name="Barrels" type="Sprite2D" parent="Barrels/Barrels/Barrels/Barrels/Barrels/Barrels/Barrels"]
+position = Vector2(-1532.47, -3986.58)
+scale = Vector2(1.10451, 0.886038)
+texture = ExtResource("22_yt4js")

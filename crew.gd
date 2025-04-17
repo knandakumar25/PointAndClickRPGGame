@@ -6,6 +6,12 @@ var health := 5
 
 func _ready() -> void:
 	update_health_label()
+	$AnimatedSprite2D.play("AndrewWalk")
+	$AnimatedSprite2D2.play("RaulWalk")
+	$AnimatedSprite2D3.play("MastanWalk")
+	$AnimatedSprite2D4.play("HancockWalk")
+	$AnimatedSprite2D5.play("RobertWalk")
+	$AnimatedSprite2D6.play("ArjunWalk")
 
 func _process(delta: float) -> void:
 	if parent is PathFollow2D:
