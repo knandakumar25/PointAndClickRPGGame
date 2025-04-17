@@ -398,7 +398,7 @@ func _show_node(key: String) -> void:
 	if node.choices.size() == 0:
 		var end_btn = Button.new()
 		end_btn.text = "The End"
-		end_btn.disabled = true
+		end_btn.pressed.connect(Callable(self, "_on_end_pressed"))
 		choice_container.add_child(end_btn)
 		return
 
@@ -411,7 +411,8 @@ func _show_node(key: String) -> void:
 			Callable(self, "_on_choice_pressed").bind(choice.next)
 		)
 
-
+func _on_end_pressed() -> void:
+	get_tree().quit()
 
 func _on_choice_pressed(next_key: String) -> void:
 	_show_node(next_key)
