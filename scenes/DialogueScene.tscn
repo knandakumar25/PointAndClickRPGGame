@@ -22,6 +22,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="DialogueText" type="RichTextLabel" parent="."]
+layout_mode = 0
 offset_left = 151.0
 offset_top = 107.0
 offset_right = 836.0

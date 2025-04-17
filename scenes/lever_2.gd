@@ -10,5 +10,5 @@ func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void
 
 func update_sprite() -> void:
 	lever_sprite.texture = lever_on_texture
-	$"../StaticBody2D3".hide()
-	$"../../BlackVeil".hide()
+	$"../StaticBody2D3".queue_free()
+	$"../../BlackVeil".queue_free()

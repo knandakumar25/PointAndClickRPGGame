@@ -1,8 +1,7 @@
-[gd_scene load_steps=33 format=3 uid="uid://dxwyfwsg3v6f1"]
+[gd_scene load_steps=40 format=3 uid="uid://dxwyfwsg3v6f1"]
 
 [ext_resource type="Texture2D" uid="uid://dgtlph7jewllx" path="res://assets/images/BackgroundScene1.png" id="1_7sgtb"]
 [ext_resource type="Script" path="res://camerga.gd" id="2_j2wnf"]
-[ext_resource type="Texture2D" uid="uid://c3avgdwo5shke" path="res://PlayerPlaceholder.png" id="2_w0h7e"]
 [ext_resource type="Script" path="res://path_2d.gd" id="3_nfx6w"]
 [ext_resource type="Script" path="res://path_follow_2d.gd" id="3_vpte3"]
 [ext_resource type="Script" path="res://player.gd" id="4_5v6uy"]
@@ -21,15 +20,38 @@
 [ext_resource type="Texture2D" uid="uid://b6pst4fhlpffy" path="res://assets/images/RobertFrame2.png" id="19_jwyvp"]
 [ext_resource type="Texture2D" uid="uid://dcep0fulh8irj" path="res://assets/images/ArjunFrame1.png" id="20_by4fa"]
 [ext_resource type="Texture2D" uid="uid://buq4l3v38yxbr" path="res://assets/images/ArjunFrame2.png" id="21_lvhxx"]
-[ext_resource type="Texture2D" uid="uid://iabo235as3f1" path="res://assets/images/Barrels.png" id="22_yt4js"]
+[ext_resource type="Texture2D" uid="uid://br2vhfjgt0e6w" path="res://assets/images/Palm3.png" id="22_gkm8p"]
+[ext_resource type="Texture2D" uid="uid://cgxm4n20geovt" path="res://assets/images/Palm1.png" id="23_nqmbg"]
+[ext_resource type="Texture2D" uid="uid://xdgaihb017k8" path="res://assets/images/Palm2.png" id="24_1681f"]
+[ext_resource type="Texture2D" uid="uid://bfo4q6rpt56hl" path="res://assets/images/BeachRock1.png" id="25_ktvut"]
+[ext_resource type="Texture2D" uid="uid://fngc1arri1y1" path="res://assets/images/BeachRock2.png" id="26_w7cbk"]
+[ext_resource type="Texture2D" uid="uid://cvxbu7doncb8p" path="res://assets/images/BeachRock3.png" id="27_by06g"]
+[ext_resource type="Texture2D" uid="uid://ctc8cx4rfcw7g" path="res://assets/images/BeachRock4.png" id="28_onrl4"]
+[ext_resource type="Texture2D" uid="uid://rlkr0xpun3ck" path="res://assets/images/BeachRock5.png" id="29_mj3nh"]
+[ext_resource type="Texture2D" uid="uid://m1lp5p1gd4gg" path="res://assets/images/Ship.png" id="30_q08fj"]
 
 [sub_resource type="Curve2D" id="Curve2D_0uuj1"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 1129, 623, 0, 0, 0, 0, 1110, 66, 0, 0, 0, 0, 908, 73, 0, 0, 0, 0, 903, 611, 0, 0, 0, 0, 688, 608, 0, 0, 0, 0, 690, 77, 0, 0, 0, 0, 531, 77, 0, 0, 0, 0, 520, 597, 0, 0, 0, 0, 341, 596, 0, 0, 0, 0, 335, 77, 0, 0, 0, 0, 174, 80, 0, 0, 0, 0, 169, 593, 0, 0, 0, 0, 24, 587, 0, 0, 0, 0, 23, 74)
+"points": PackedVector2Array(0, 0, 0, 0, 1225, 566, 0, 0, 0, 0, 1231, 78, 0, 0, 0, 0, 1010, 73, 0, 0, 0, 0, 1010, 608, 0, 0, 0, 0, 963, 604, 0, 0, 0, 0, 780, 603, 0, 0, 0, 0, 780, 70, 0, 0, 0, 0, 568, 69, 0, 0, 0, 0, 565, 74, 0, 0, 0, 0, 568, 600, 0, 0, 0, 0, 341, 596, 0, 0, 0, 0, 335, 77, 0, 0, 0, 0, 127, 70, 0, 0, 0, 0, 122, 582, 0, 0, 0, 0, 24, 587, 0, 0, 0, 0, 23, 74)
 }
-point_count = 14
+point_count = 16
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_efg7e"]
+radius = 578.047
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7bhs2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_by4fa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_lvhxx")
+}],
+"loop": true,
+"name": &"ArjunWalk",
+"speed": 2.0
+}]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7vh7k"]
 animations = [{
@@ -58,8 +80,6 @@ animations = [{
 "name": &"AndrewWalk",
 "speed": 2.0
 }]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_1nxyk"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pyh8b"]
 animations = [{
@@ -109,31 +129,20 @@ animations = [{
 "speed": 2.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_7bhs2"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("20_by4fa")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_lvhxx")
-}],
-"loop": true,
-"name": &"ArjunWalk",
-"speed": 2.0
-}]
+[sub_resource type="CircleShape2D" id="CircleShape2D_1nxyk"]
+radius = 662.785
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lp4ol"]
-radius = 22.3607
+radius = 3.93951
 
 [node name="BeachScene1" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 visibility_layer = 2
-offset_left = -425.0
-offset_top = -294.0
-offset_right = 9820.0
-offset_bottom = 6216.0
+offset_left = -649.0
+offset_top = -653.0
+offset_right = 10404.0
+offset_bottom = 6711.0
 scale = Vector2(0.228898, 0.210749)
 texture = ExtResource("1_7sgtb")
 
@@ -149,8 +158,8 @@ curve = SubResource("Curve2D_0uuj1")
 script = ExtResource("3_nfx6w")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(1129, 623)
-rotation = -1.60489
+position = Vector2(1225, 566)
+rotation = -1.5585
 script = ExtResource("3_vpte3")
 
 [node name="Player" type="Area2D" parent="Path2D/PathFollow2D"]
@@ -160,67 +169,79 @@ skew = -0.0117593
 script = ExtResource("4_5v6uy")
 
 [node name="Sprite2D" type="Sprite2D" parent="Path2D/PathFollow2D/Player"]
-texture = ExtResource("2_w0h7e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/Player"]
+position = Vector2(-51.0529, -245.592)
 shape = SubResource("CircleShape2D_efg7e")
 
 [node name="Crew" type="Area2D" parent="Path2D/PathFollow2D"]
+position = Vector2(-3.97517, 2.04903)
 scale = Vector2(0.058904, 0.0527825)
 skew = -0.0117593
 script = ExtResource("5_yeycg")
 
-[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="Path2D/PathFollow2D/Crew"]
-position = Vector2(199.999, 200)
+[node name="AnimatedSprite2D6" type="AnimatedSprite2D" parent="Path2D/PathFollow2D/Crew"]
+position = Vector2(832, 159.096)
 rotation = 1.5708
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_7bhs2")
+animation = &"ArjunWalk"
+centered = false
+flip_h = true
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="Path2D/PathFollow2D/Crew"]
+position = Vector2(598.143, 166.274)
+rotation = 1.5708
+scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_7vh7k")
 animation = &"MastanWalk"
 centered = false
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Path2D/PathFollow2D/Crew"]
+position = Vector2(398.144, -33.7259)
 rotation = 1.5708
+scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_0m16w")
 animation = &"AndrewWalk"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/Crew"]
-shape = SubResource("CircleShape2D_1nxyk")
-
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Path2D/PathFollow2D/Crew"]
+position = Vector2(398.144, -33.7259)
 rotation = 1.5708
+scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_pyh8b")
 animation = &"RaulWalk"
 frame_progress = 0.529274
 centered = false
 
 [node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="Path2D/PathFollow2D/Crew"]
-position = Vector2(-300, -300)
+position = Vector2(703.484, -587.34)
 rotation = 1.5708
+scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_517o0")
 animation = &"HancockWalk"
 centered = false
 flip_h = true
 
 [node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="Path2D/PathFollow2D/Crew"]
-position = Vector2(0, -400)
+position = Vector2(398.144, -433.728)
 rotation = 1.5708
+scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_u3rfi")
 animation = &"RobertWalk"
 centered = false
 flip_h = true
 
-[node name="AnimatedSprite2D6" type="AnimatedSprite2D" parent="Path2D/PathFollow2D/Crew"]
-position = Vector2(400, 400)
-rotation = 1.5708
-sprite_frames = SubResource("SpriteFrames_7bhs2")
-animation = &"ArjunWalk"
-centered = false
-flip_h = true
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/Crew"]
+position = Vector2(271.656, 15.2184)
+scale = Vector2(1, 1)
+shape = SubResource("CircleShape2D_1nxyk")
 
 [node name="Center" type="Area2D" parent="Path2D/PathFollow2D"]
+position = Vector2(-12.7901, 17.1585)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/Center"]
-position = Vector2(-18.3987, 11.3794)
-scale = Vector2(2, 2)
+position = Vector2(25.7645, -19.3182)
+scale = Vector2(2.5, 2.5)
 shape = SubResource("CircleShape2D_lp4ol")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -241,43 +262,563 @@ offset_bottom = 69.0
 theme_override_colors/font_color = Color(0, 1, 1, 1)
 theme_override_font_sizes/font_size = 50
 text = "Testing 123"
+metadata/_edit_use_anchors_ = true
 
-[node name="Barrels" type="Sprite2D" parent="."]
-position = Vector2(1104, 24)
-scale = Vector2(0.0953776, 0.102051)
-texture = ExtResource("22_yt4js")
+[node name="Palm3" type="Sprite2D" parent="."]
+position = Vector2(1001.25, -129)
+scale = Vector2(0.455752, 0.453317)
+texture = ExtResource("22_gkm8p")
 
-[node name="Barrels" type="Sprite2D" parent="Barrels"]
-position = Vector2(-2579.22, 646.737)
-scale = Vector2(1.15146, 1.18548)
-texture = ExtResource("22_yt4js")
+[node name="Palm1" type="Sprite2D" parent="."]
+position = Vector2(1103.25, -136)
+scale = Vector2(0.375325, 0.353909)
+texture = ExtResource("23_nqmbg")
 
-[node name="Barrels" type="Sprite2D" parent="Barrels/Barrels"]
-position = Vector2(509.907, 4769.41)
-scale = Vector2(1.08364, 0.972028)
-texture = ExtResource("22_yt4js")
+[node name="Palm2" type="Sprite2D" parent="."]
+position = Vector2(1051.25, -125)
+scale = Vector2(0.392265, 0.364444)
+texture = ExtResource("24_1681f")
 
-[node name="Barrels" type="Sprite2D" parent="Barrels/Barrels/Barrels"]
-position = Vector2(-2487.19, -773.84)
-scale = Vector2(0.789559, 0.999206)
-texture = ExtResource("22_yt4js")
+[node name="Palm5" type="Sprite2D" parent="."]
+position = Vector2(887, -137)
+scale = Vector2(0.419481, 0.407407)
+texture = ExtResource("23_nqmbg")
 
-[node name="Barrels" type="Sprite2D" parent="Barrels/Barrels/Barrels/Barrels"]
-position = Vector2(446.974, -4714.81)
-scale = Vector2(1.24121, 1.09971)
-texture = ExtResource("22_yt4js")
+[node name="Palm4" type="Sprite2D" parent="."]
+position = Vector2(953, -158)
+scale = Vector2(0.524862, 0.535556)
+texture = ExtResource("24_1681f")
 
-[node name="Barrels" type="Sprite2D" parent="Barrels/Barrels/Barrels/Barrels/Barrels"]
-position = Vector2(-1671.94, 673.28)
-scale = Vector2(0.936572, 1.04029)
-texture = ExtResource("22_yt4js")
+[node name="Palm6" type="Sprite2D" parent="."]
+position = Vector2(800, -125)
+scale = Vector2(0.328909, 0.463145)
+texture = ExtResource("22_gkm8p")
 
-[node name="Barrels" type="Sprite2D" parent="Barrels/Barrels/Barrels/Barrels/Barrels/Barrels"]
-position = Vector2(-173.939, 4069.21)
-scale = Vector2(1.05737, 0.964745)
-texture = ExtResource("22_yt4js")
+[node name="Palm7" type="Sprite2D" parent="."]
+position = Vector2(663, -118.5)
+scale = Vector2(0.455752, 0.453317)
+texture = ExtResource("22_gkm8p")
 
-[node name="Barrels" type="Sprite2D" parent="Barrels/Barrels/Barrels/Barrels/Barrels/Barrels/Barrels"]
-position = Vector2(-1532.47, -3986.58)
-scale = Vector2(1.10451, 0.886038)
-texture = ExtResource("22_yt4js")
+[node name="Palm8" type="Sprite2D" parent="."]
+position = Vector2(765, -125.5)
+scale = Vector2(0.375325, 0.353909)
+texture = ExtResource("23_nqmbg")
+
+[node name="Palm9" type="Sprite2D" parent="."]
+position = Vector2(713, -114.5)
+scale = Vector2(0.392265, 0.364444)
+texture = ExtResource("24_1681f")
+
+[node name="Palm10" type="Sprite2D" parent="."]
+position = Vector2(548.75, -126.5)
+scale = Vector2(0.419481, 0.407407)
+texture = ExtResource("23_nqmbg")
+
+[node name="Palm11" type="Sprite2D" parent="."]
+position = Vector2(614.75, -147.5)
+scale = Vector2(0.524862, 0.535556)
+texture = ExtResource("24_1681f")
+
+[node name="Palm12" type="Sprite2D" parent="."]
+position = Vector2(461.75, -114.5)
+scale = Vector2(0.328909, 0.463145)
+texture = ExtResource("22_gkm8p")
+
+[node name="Palm13" type="Sprite2D" parent="."]
+position = Vector2(315, -107.5)
+scale = Vector2(0.455752, 0.453317)
+texture = ExtResource("22_gkm8p")
+
+[node name="Palm14" type="Sprite2D" parent="."]
+position = Vector2(417, -114.5)
+scale = Vector2(0.375325, 0.353909)
+texture = ExtResource("23_nqmbg")
+
+[node name="Palm15" type="Sprite2D" parent="."]
+position = Vector2(365, -103.5)
+scale = Vector2(0.392265, 0.364444)
+texture = ExtResource("24_1681f")
+
+[node name="Palm16" type="Sprite2D" parent="."]
+position = Vector2(200.75, -115.5)
+scale = Vector2(0.419481, 0.407407)
+texture = ExtResource("23_nqmbg")
+
+[node name="Palm17" type="Sprite2D" parent="."]
+position = Vector2(266.75, -136.5)
+scale = Vector2(0.524862, 0.535556)
+texture = ExtResource("24_1681f")
+
+[node name="Palm18" type="Sprite2D" parent="."]
+position = Vector2(113.75, -103.5)
+scale = Vector2(0.328909, 0.463145)
+texture = ExtResource("22_gkm8p")
+
+[node name="BeachRock1" type="Sprite2D" parent="."]
+position = Vector2(1124.06, 177)
+scale = Vector2(0.136704, 0.151042)
+texture = ExtResource("25_ktvut")
+
+[node name="BeachRock2" type="Sprite2D" parent="."]
+position = Vector2(1126.56, 201)
+scale = Vector2(0.184543, 0.2)
+texture = ExtResource("26_w7cbk")
+
+[node name="BeachRock3" type="Sprite2D" parent="."]
+position = Vector2(1137.56, 224)
+scale = Vector2(0.237255, 0.265306)
+texture = ExtResource("27_by06g")
+
+[node name="Palm19" type="Sprite2D" parent="."]
+position = Vector2(1142.56, 222)
+scale = Vector2(0.212707, 0.206667)
+texture = ExtResource("24_1681f")
+
+[node name="BeachRock4" type="Sprite2D" parent="."]
+position = Vector2(1113.56, 249)
+scale = Vector2(0.193091, 0.130658)
+texture = ExtResource("28_onrl4")
+
+[node name="BeachRock5" type="Sprite2D" parent="."]
+position = Vector2(1124.56, 280)
+scale = Vector2(0.192453, 0.177741)
+texture = ExtResource("29_mj3nh")
+
+[node name="BeachRock6" type="Sprite2D" parent="."]
+position = Vector2(1120.06, 292)
+scale = Vector2(0.136704, 0.151042)
+texture = ExtResource("25_ktvut")
+
+[node name="BeachRock7" type="Sprite2D" parent="."]
+position = Vector2(1122.56, 316)
+scale = Vector2(0.184543, 0.2)
+texture = ExtResource("26_w7cbk")
+
+[node name="BeachRock8" type="Sprite2D" parent="."]
+position = Vector2(1133.56, 339)
+scale = Vector2(0.237255, 0.265306)
+texture = ExtResource("27_by06g")
+
+[node name="Palm20" type="Sprite2D" parent="."]
+position = Vector2(1138.56, 337)
+scale = Vector2(0.212707, 0.206667)
+texture = ExtResource("24_1681f")
+
+[node name="BeachRock9" type="Sprite2D" parent="."]
+position = Vector2(1109.56, 364)
+scale = Vector2(0.193091, 0.130658)
+texture = ExtResource("28_onrl4")
+
+[node name="BeachRock10" type="Sprite2D" parent="."]
+position = Vector2(1120.56, 395)
+scale = Vector2(0.192453, 0.177741)
+texture = ExtResource("29_mj3nh")
+
+[node name="BeachRock11" type="Sprite2D" parent="."]
+position = Vector2(1120.06, 409)
+scale = Vector2(0.136704, 0.151042)
+texture = ExtResource("25_ktvut")
+
+[node name="BeachRock12" type="Sprite2D" parent="."]
+position = Vector2(1122.56, 433)
+scale = Vector2(0.184543, 0.2)
+texture = ExtResource("26_w7cbk")
+
+[node name="BeachRock13" type="Sprite2D" parent="."]
+position = Vector2(1133.56, 456)
+scale = Vector2(0.237255, 0.265306)
+texture = ExtResource("27_by06g")
+
+[node name="Palm21" type="Sprite2D" parent="."]
+position = Vector2(1138.56, 454)
+scale = Vector2(0.212707, 0.206667)
+texture = ExtResource("24_1681f")
+
+[node name="BeachRock14" type="Sprite2D" parent="."]
+position = Vector2(1109.56, 481)
+scale = Vector2(0.193091, 0.130658)
+texture = ExtResource("28_onrl4")
+
+[node name="BeachRock15" type="Sprite2D" parent="."]
+position = Vector2(1120.56, 512)
+scale = Vector2(0.192453, 0.177741)
+texture = ExtResource("29_mj3nh")
+
+[node name="BeachRock16" type="Sprite2D" parent="."]
+position = Vector2(891.063, 180)
+scale = Vector2(0.136704, 0.151042)
+texture = ExtResource("25_ktvut")
+
+[node name="BeachRock17" type="Sprite2D" parent="."]
+position = Vector2(893.562, 204)
+scale = Vector2(0.184543, 0.2)
+texture = ExtResource("26_w7cbk")
+
+[node name="BeachRock18" type="Sprite2D" parent="."]
+position = Vector2(904.562, 227)
+scale = Vector2(0.237255, 0.265306)
+texture = ExtResource("27_by06g")
+
+[node name="Palm22" type="Sprite2D" parent="."]
+position = Vector2(909.562, 225)
+scale = Vector2(0.212707, 0.206667)
+texture = ExtResource("24_1681f")
+
+[node name="BeachRock19" type="Sprite2D" parent="."]
+position = Vector2(880.562, 252)
+scale = Vector2(0.193091, 0.130658)
+texture = ExtResource("28_onrl4")
+
+[node name="BeachRock20" type="Sprite2D" parent="."]
+position = Vector2(891.562, 283)
+scale = Vector2(0.192453, 0.177741)
+texture = ExtResource("29_mj3nh")
+
+[node name="BeachRock21" type="Sprite2D" parent="."]
+position = Vector2(887.063, 295)
+scale = Vector2(0.136704, 0.151042)
+texture = ExtResource("25_ktvut")
+
+[node name="BeachRock22" type="Sprite2D" parent="."]
+position = Vector2(889.562, 319)
+scale = Vector2(0.184543, 0.2)
+texture = ExtResource("26_w7cbk")
+
+[node name="BeachRock23" type="Sprite2D" parent="."]
+position = Vector2(900.562, 342)
+scale = Vector2(0.237255, 0.265306)
+texture = ExtResource("27_by06g")
+
+[node name="Palm23" type="Sprite2D" parent="."]
+position = Vector2(905.562, 340)
+scale = Vector2(0.212707, 0.206667)
+texture = ExtResource("24_1681f")
+
+[node name="BeachRock24" type="Sprite2D" parent="."]
+position = Vector2(876.562, 367)
+scale = Vector2(0.193091, 0.130658)
+texture = ExtResource("28_onrl4")
+
+[node name="BeachRock25" type="Sprite2D" parent="."]
+position = Vector2(887.562, 398)
+scale = Vector2(0.192453, 0.177741)
+texture = ExtResource("29_mj3nh")
+
+[node name="BeachRock26" type="Sprite2D" parent="."]
+position = Vector2(887.063, 412)
+scale = Vector2(0.136704, 0.151042)
+texture = ExtResource("25_ktvut")
+
+[node name="BeachRock27" type="Sprite2D" parent="."]
+position = Vector2(889.562, 436)
+scale = Vector2(0.184543, 0.2)
+texture = ExtResource("26_w7cbk")
+
+[node name="BeachRock28" type="Sprite2D" parent="."]
+position = Vector2(900.562, 459)
+scale = Vector2(0.237255, 0.265306)
+texture = ExtResource("27_by06g")
+
+[node name="Palm24" type="Sprite2D" parent="."]
+position = Vector2(905.562, 457)
+scale = Vector2(0.212707, 0.206667)
+texture = ExtResource("24_1681f")
+
+[node name="BeachRock29" type="Sprite2D" parent="."]
+position = Vector2(876.562, 484)
+scale = Vector2(0.193091, 0.130658)
+texture = ExtResource("28_onrl4")
+
+[node name="BeachRock30" type="Sprite2D" parent="."]
+position = Vector2(887.562, 515)
+scale = Vector2(0.192453, 0.177741)
+texture = ExtResource("29_mj3nh")
+
+[node name="BeachRock31" type="Sprite2D" parent="."]
+position = Vector2(671.063, 183)
+scale = Vector2(0.136704, 0.151042)
+texture = ExtResource("25_ktvut")
+
+[node name="BeachRock32" type="Sprite2D" parent="."]
+position = Vector2(673.562, 207)
+scale = Vector2(0.184543, 0.2)
+texture = ExtResource("26_w7cbk")
+
+[node name="BeachRock33" type="Sprite2D" parent="."]
+position = Vector2(684.562, 230)
+scale = Vector2(0.237255, 0.265306)
+texture = ExtResource("27_by06g")
+
+[node name="Palm25" type="Sprite2D" parent="."]
+position = Vector2(689.562, 228)
+scale = Vector2(0.212707, 0.206667)
+texture = ExtResource("24_1681f")
+
+[node name="BeachRock34" type="Sprite2D" parent="."]
+position = Vector2(660.562, 255)
+scale = Vector2(0.193091, 0.130658)
+texture = ExtResource("28_onrl4")
+
+[node name="BeachRock35" type="Sprite2D" parent="."]
+position = Vector2(671.562, 286)
+scale = Vector2(0.192453, 0.177741)
+texture = ExtResource("29_mj3nh")
+
+[node name="BeachRock36" type="Sprite2D" parent="."]
+position = Vector2(667.063, 298)
+scale = Vector2(0.136704, 0.151042)
+texture = ExtResource("25_ktvut")
+
+[node name="BeachRock37" type="Sprite2D" parent="."]
+position = Vector2(669.562, 322)
+scale = Vector2(0.184543, 0.2)
+texture = ExtResource("26_w7cbk")
+
+[node name="BeachRock38" type="Sprite2D" parent="."]
+position = Vector2(680.562, 345)
+scale = Vector2(0.237255, 0.265306)
+texture = ExtResource("27_by06g")
+
+[node name="Palm26" type="Sprite2D" parent="."]
+position = Vector2(685.562, 343)
+scale = Vector2(0.212707, 0.206667)
+texture = ExtResource("24_1681f")
+
+[node name="BeachRock39" type="Sprite2D" parent="."]
+position = Vector2(656.562, 370)
+scale = Vector2(0.193091, 0.130658)
+texture = ExtResource("28_onrl4")
+
+[node name="BeachRock40" type="Sprite2D" parent="."]
+position = Vector2(667.562, 401)
+scale = Vector2(0.192453, 0.177741)
+texture = ExtResource("29_mj3nh")
+
+[node name="BeachRock41" type="Sprite2D" parent="."]
+position = Vector2(667.063, 415)
+scale = Vector2(0.136704, 0.151042)
+texture = ExtResource("25_ktvut")
+
+[node name="BeachRock42" type="Sprite2D" parent="."]
+position = Vector2(669.562, 439)
+scale = Vector2(0.184543, 0.2)
+texture = ExtResource("26_w7cbk")
+
+[node name="BeachRock43" type="Sprite2D" parent="."]
+position = Vector2(680.562, 462)
+scale = Vector2(0.237255, 0.265306)
+texture = ExtResource("27_by06g")
+
+[node name="Palm27" type="Sprite2D" parent="."]
+position = Vector2(685.562, 460)
+scale = Vector2(0.212707, 0.206667)
+texture = ExtResource("24_1681f")
+
+[node name="BeachRock44" type="Sprite2D" parent="."]
+position = Vector2(656.562, 487)
+scale = Vector2(0.193091, 0.130658)
+texture = ExtResource("28_onrl4")
+
+[node name="BeachRock45" type="Sprite2D" parent="."]
+position = Vector2(670, 513)
+scale = Vector2(0.192453, 0.177741)
+texture = ExtResource("29_mj3nh")
+
+[node name="BeachRock46" type="Sprite2D" parent="."]
+position = Vector2(450.063, 171)
+scale = Vector2(0.136704, 0.151042)
+texture = ExtResource("25_ktvut")
+
+[node name="BeachRock47" type="Sprite2D" parent="."]
+position = Vector2(452.562, 195)
+scale = Vector2(0.184543, 0.2)
+texture = ExtResource("26_w7cbk")
+
+[node name="BeachRock48" type="Sprite2D" parent="."]
+position = Vector2(463.562, 218)
+scale = Vector2(0.237255, 0.265306)
+texture = ExtResource("27_by06g")
+
+[node name="Palm28" type="Sprite2D" parent="."]
+position = Vector2(468.562, 216)
+scale = Vector2(0.212707, 0.206667)
+texture = ExtResource("24_1681f")
+
+[node name="BeachRock49" type="Sprite2D" parent="."]
+position = Vector2(439.562, 243)
+scale = Vector2(0.193091, 0.130658)
+texture = ExtResource("28_onrl4")
+
+[node name="BeachRock50" type="Sprite2D" parent="."]
+position = Vector2(450.562, 274)
+scale = Vector2(0.192453, 0.177741)
+texture = ExtResource("29_mj3nh")
+
+[node name="BeachRock51" type="Sprite2D" parent="."]
+position = Vector2(446.063, 286)
+scale = Vector2(0.136704, 0.151042)
+texture = ExtResource("25_ktvut")
+
+[node name="BeachRock52" type="Sprite2D" parent="."]
+position = Vector2(448.562, 310)
+scale = Vector2(0.184543, 0.2)
+texture = ExtResource("26_w7cbk")
+
+[node name="BeachRock53" type="Sprite2D" parent="."]
+position = Vector2(459.562, 333)
+scale = Vector2(0.237255, 0.265306)
+texture = ExtResource("27_by06g")
+
+[node name="Palm29" type="Sprite2D" parent="."]
+position = Vector2(464.562, 331)
+scale = Vector2(0.212707, 0.206667)
+texture = ExtResource("24_1681f")
+
+[node name="BeachRock54" type="Sprite2D" parent="."]
+position = Vector2(435.562, 358)
+scale = Vector2(0.193091, 0.130658)
+texture = ExtResource("28_onrl4")
+
+[node name="BeachRock55" type="Sprite2D" parent="."]
+position = Vector2(446.562, 389)
+scale = Vector2(0.192453, 0.177741)
+texture = ExtResource("29_mj3nh")
+
+[node name="BeachRock56" type="Sprite2D" parent="."]
+position = Vector2(446.063, 403)
+scale = Vector2(0.136704, 0.151042)
+texture = ExtResource("25_ktvut")
+
+[node name="BeachRock57" type="Sprite2D" parent="."]
+position = Vector2(448.562, 427)
+scale = Vector2(0.184543, 0.2)
+texture = ExtResource("26_w7cbk")
+
+[node name="BeachRock58" type="Sprite2D" parent="."]
+position = Vector2(459.562, 450)
+scale = Vector2(0.237255, 0.265306)
+texture = ExtResource("27_by06g")
+
+[node name="Palm30" type="Sprite2D" parent="."]
+position = Vector2(464.562, 448)
+scale = Vector2(0.212707, 0.206667)
+texture = ExtResource("24_1681f")
+
+[node name="BeachRock59" type="Sprite2D" parent="."]
+position = Vector2(435.562, 475)
+scale = Vector2(0.193091, 0.130658)
+texture = ExtResource("28_onrl4")
+
+[node name="BeachRock60" type="Sprite2D" parent="."]
+position = Vector2(446.562, 506)
+scale = Vector2(0.192453, 0.177741)
+texture = ExtResource("29_mj3nh")
+
+[node name="BeachRock61" type="Sprite2D" parent="."]
+position = Vector2(228.063, 164)
+scale = Vector2(0.136704, 0.151042)
+texture = ExtResource("25_ktvut")
+
+[node name="BeachRock62" type="Sprite2D" parent="."]
+position = Vector2(230.562, 188)
+scale = Vector2(0.184543, 0.2)
+texture = ExtResource("26_w7cbk")
+
+[node name="BeachRock63" type="Sprite2D" parent="."]
+position = Vector2(241.562, 211)
+scale = Vector2(0.237255, 0.265306)
+texture = ExtResource("27_by06g")
+
+[node name="Palm31" type="Sprite2D" parent="."]
+position = Vector2(246.562, 209)
+scale = Vector2(0.212707, 0.206667)
+texture = ExtResource("24_1681f")
+
+[node name="BeachRock64" type="Sprite2D" parent="."]
+position = Vector2(217.562, 236)
+scale = Vector2(0.193091, 0.130658)
+texture = ExtResource("28_onrl4")
+
+[node name="BeachRock65" type="Sprite2D" parent="."]
+position = Vector2(228.562, 267)
+scale = Vector2(0.192453, 0.177741)
+texture = ExtResource("29_mj3nh")
+
+[node name="BeachRock66" type="Sprite2D" parent="."]
+position = Vector2(224.063, 279)
+scale = Vector2(0.136704, 0.151042)
+texture = ExtResource("25_ktvut")
+
+[node name="BeachRock67" type="Sprite2D" parent="."]
+position = Vector2(226.562, 303)
+scale = Vector2(0.184543, 0.2)
+texture = ExtResource("26_w7cbk")
+
+[node name="BeachRock68" type="Sprite2D" parent="."]
+position = Vector2(237.562, 326)
+scale = Vector2(0.237255, 0.265306)
+texture = ExtResource("27_by06g")
+
+[node name="Palm32" type="Sprite2D" parent="."]
+position = Vector2(242.562, 324)
+scale = Vector2(0.212707, 0.206667)
+texture = ExtResource("24_1681f")
+
+[node name="BeachRock69" type="Sprite2D" parent="."]
+position = Vector2(213.562, 351)
+scale = Vector2(0.193091, 0.130658)
+texture = ExtResource("28_onrl4")
+
+[node name="BeachRock70" type="Sprite2D" parent="."]
+position = Vector2(224.562, 382)
+scale = Vector2(0.192453, 0.177741)
+texture = ExtResource("29_mj3nh")
+
+[node name="BeachRock71" type="Sprite2D" parent="."]
+position = Vector2(224.063, 396)
+scale = Vector2(0.136704, 0.151042)
+texture = ExtResource("25_ktvut")
+
+[node name="BeachRock72" type="Sprite2D" parent="."]
+position = Vector2(226.562, 420)
+scale = Vector2(0.184543, 0.2)
+texture = ExtResource("26_w7cbk")
+
+[node name="BeachRock73" type="Sprite2D" parent="."]
+position = Vector2(237.562, 443)
+scale = Vector2(0.237255, 0.265306)
+texture = ExtResource("27_by06g")
+
+[node name="Palm33" type="Sprite2D" parent="."]
+position = Vector2(242.562, 441)
+scale = Vector2(0.212707, 0.206667)
+texture = ExtResource("24_1681f")
+
+[node name="BeachRock74" type="Sprite2D" parent="."]
+position = Vector2(213.562, 468)
+scale = Vector2(0.193091, 0.130658)
+texture = ExtResource("28_onrl4")
+
+[node name="BeachRock75" type="Sprite2D" parent="."]
+position = Vector2(224.562, 499)
+scale = Vector2(0.192453, 0.177741)
+texture = ExtResource("29_mj3nh")
+
+[node name="Ship" type="Sprite2D" parent="."]
+position = Vector2(-160, -503)
+texture = ExtResource("30_q08fj")
+
+[node name="Palm34" type="Sprite2D" parent="."]
+position = Vector2(1234.75, -130.75)
+scale = Vector2(0.328909, 0.463145)
+texture = ExtResource("22_gkm8p")
+
+[node name="Palm35" type="Sprite2D" parent="."]
+position = Vector2(1190, -130.75)
+scale = Vector2(0.375325, 0.353909)
+texture = ExtResource("23_nqmbg")
+
+[node name="Palm36" type="Sprite2D" parent="."]
+position = Vector2(1138, -119.75)
+scale = Vector2(0.392265, 0.364444)
+texture = ExtResource("24_1681f")
