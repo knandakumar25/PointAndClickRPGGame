@@ -1,9 +1,9 @@
 [gd_scene load_steps=12 format=3 uid="uid://cau45cdjgc80g"]
 
-[ext_resource type="Script" path="res://scenes/hall_4.gd" id="1_2atn7"]
-[ext_resource type="Script" path="res://scenes/code_2.gd" id="2_ivwvy"]
+[ext_resource type="Script" uid="uid://drl53rdqmyqfg" path="res://scenes/hall_4.gd" id="1_2atn7"]
+[ext_resource type="Script" uid="uid://b0yjkgx6a43p7" path="res://scenes/code_2.gd" id="2_ivwvy"]
 [ext_resource type="Texture2D" uid="uid://dhlhu41l23r2j" path="res://assets/images/white.png" id="2_xrvgt"]
-[ext_resource type="Script" path="res://scenes/code_3.gd" id="3_4f2ta"]
+[ext_resource type="Script" uid="uid://cskftgv8k3yb4" path="res://scenes/code_3.gd" id="3_4f2ta"]
 [ext_resource type="Texture2D" uid="uid://ch68cp8u8n7oi" path="res://assets/images/varuna.png" id="7_msoqp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r1dko"]

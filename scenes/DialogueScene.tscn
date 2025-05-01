@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cfase6gtdva6r"]
 
-[ext_resource type="Script" path="res://scenes/DialogueScene.gd" id="1_4ohvb"]
+[ext_resource type="Script" uid="uid://c4w2aff2wkbkx" path="res://scenes/DialogueScene.gd" id="1_4ohvb"]
 [ext_resource type="Texture2D" uid="uid://c88fbg3wqo2f2" path="res://assets/images/Scene3Varuna.png" id="2_es3xh"]
 
 [node name="DialogueScene" type="Control"]

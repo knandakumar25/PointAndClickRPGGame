@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://bfhsdxagsi27d"]
 
 [ext_resource type="Texture2D" uid="uid://b7vvvtnvfihul" path="res://assets/images/wall.png" id="1_gr66m"]
-[ext_resource type="Script" path="res://scenes/code.gd" id="2_pp8am"]
+[ext_resource type="Script" uid="uid://bq6mv53jwnrjd" path="res://scenes/code.gd" id="2_pp8am"]
 [ext_resource type="Texture2D" uid="uid://be6qpb04bx05g" path="res://assets/images/door_closed.png" id="5_138v8"]
 [ext_resource type="AudioStream" uid="uid://c877mxl82yqfs" path="res://assets/music/water-bubbles-257594.mp3" id="6_icq5p"]
 [ext_resource type="Texture2D" uid="uid://divo0ss2qrri" path="res://assets/images/door_open.png" id="6_m7lfj"]

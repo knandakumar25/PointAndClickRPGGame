@@ -12,7 +12,7 @@ config_version=5
 
 config/name="PointAndClickRPGGame"
 run/main_scene="res://main_menu.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
+config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]
@@ -22,6 +22,10 @@ window/size/viewport_height=1080
 window/size/mode=3
 window/stretch/mode="canvas_items"
 window/stretch/scale=2.0
+
+[editor]
+
+movie_writer/movie_file="C:/Users/karth/OneDrive/Desktop/NCSU/CSC486/PointAndClickRPGGame/Endgame.avi"
 
 [editor_plugins]
 

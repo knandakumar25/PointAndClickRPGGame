@@ -1,11 +1,11 @@
 [gd_scene load_steps=30 format=3 uid="uid://klf7sv27v2uc"]
 
-[ext_resource type="Script" path="res://scenes/hall_1.gd" id="1_a2wd2"]
+[ext_resource type="Script" uid="uid://n3bh5nukudip" path="res://scenes/hall_1.gd" id="1_a2wd2"]
 [ext_resource type="Texture2D" uid="uid://rn0stskgvt2j" path="res://assets/images/Background2.png" id="2_cfedk"]
-[ext_resource type="Script" path="res://scenes/code_2.gd" id="5_tw4ro"]
-[ext_resource type="Script" path="res://scenes/code_3.gd" id="6_4ys2x"]
+[ext_resource type="Script" uid="uid://b0yjkgx6a43p7" path="res://scenes/code_2.gd" id="5_tw4ro"]
+[ext_resource type="Script" uid="uid://cskftgv8k3yb4" path="res://scenes/code_3.gd" id="6_4ys2x"]
 [ext_resource type="PackedScene" uid="uid://dxsh5ghjice43" path="res://scenes/escapePlayer.tscn" id="7_mypp5"]
-[ext_resource type="Script" path="res://camerga.gd" id="8_jaxu5"]
+[ext_resource type="Script" uid="uid://cmm2wptfb3ld0" path="res://camerga.gd" id="8_jaxu5"]
 [ext_resource type="Texture2D" uid="uid://dx64161hh6dew" path="res://assets/images/Chest.png" id="9_eawqk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r1dko"]

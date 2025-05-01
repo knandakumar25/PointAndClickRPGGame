@@ -1,11 +1,11 @@
 [gd_scene load_steps=34 format=3 uid="uid://cnk7kdjubu63"]
 
-[ext_resource type="Script" path="res://scenes/hall_3.gd" id="1_w8d57"]
+[ext_resource type="Script" uid="uid://cvoho3oqtxoxm" path="res://scenes/hall_3.gd" id="1_w8d57"]
 [ext_resource type="Texture2D" uid="uid://rn0stskgvt2j" path="res://assets/images/Background2.png" id="2_87b7r"]
-[ext_resource type="Script" path="res://scenes/code_2.gd" id="2_j68lr"]
-[ext_resource type="Script" path="res://scenes/code_3.gd" id="3_si00r"]
+[ext_resource type="Script" uid="uid://b0yjkgx6a43p7" path="res://scenes/code_2.gd" id="2_j68lr"]
+[ext_resource type="Script" uid="uid://cskftgv8k3yb4" path="res://scenes/code_3.gd" id="3_si00r"]
 [ext_resource type="PackedScene" uid="uid://dxsh5ghjice43" path="res://scenes/escapePlayer.tscn" id="6_p64kr"]
-[ext_resource type="Script" path="res://camerga.gd" id="7_u3ams"]
+[ext_resource type="Script" uid="uid://cmm2wptfb3ld0" path="res://camerga.gd" id="7_u3ams"]
 [ext_resource type="Texture2D" uid="uid://cg6yr2kpe5f54" path="res://assets/images/Chest2.png" id="7_wj6ow"]
 [ext_resource type="Texture2D" uid="uid://ctc8cx4rfcw7g" path="res://assets/images/BeachRock4.png" id="8_rk6aj"]
 

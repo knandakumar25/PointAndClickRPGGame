@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://b3srq506njyhj"]
 
 [ext_resource type="Texture2D" uid="uid://b7vvvtnvfihul" path="res://assets/images/wall.png" id="1_vn6aq"]
-[ext_resource type="Script" path="res://scenes/code.gd" id="2_yky2y"]
+[ext_resource type="Script" uid="uid://bq6mv53jwnrjd" path="res://scenes/code.gd" id="2_yky2y"]
 [ext_resource type="PackedScene" uid="uid://bmmj5008gq35f" path="res://scenes/spikes.tscn" id="5_06d2a"]
 [ext_resource type="Texture2D" uid="uid://be6qpb04bx05g" path="res://assets/images/door_closed.png" id="5_ify5w"]
 [ext_resource type="Texture2D" uid="uid://divo0ss2qrri" path="res://assets/images/door_open.png" id="6_3ms8k"]
